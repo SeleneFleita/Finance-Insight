@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+nav {
+    background-color: #000049;
+    height: 50px; /* Ajusta la altura del nav */
+}
+:root {
+    --primary-color: #333;
+    --secondary-color: rgba(255, 255, 255, .4);
+}
+#nosotros {
+    min-height: 740px;
+    width: 100%;
+    background-color:#f8ffe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+#nosotros h2 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+
+#nosotros #parrafo {
+    width: 80%;
+    font-size: 1rem;
+    
+    text-align: center;
+    line-height: 1.5rem;
+    white-space: normal;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+.cards .card {
+    flex: 1;
+    max-width: 380px;
+    padding: 20px;
+    background-color: #6fba5e;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+.card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.card .content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+}
+h2{
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    #nosotros {
+        padding: 1%;
+    }
+    #nosotros h2 {
+        font-size: 1.5rem;
+    }
+    #nosotros #parrafo {
+        width: 100%;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 100%;
+        margin-bottom: 2%;
+    }
+}
