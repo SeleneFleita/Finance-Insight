@@ -15,8 +15,8 @@
             <p>LOGO .</p>
         </div>
         <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Banco</button>
+            <button class="btn" id="registerBtn" onclick="register()">Cliente</button>
         </div>
     </nav>
 <!----------------------------- Form box ----------------------------------->    
@@ -29,30 +29,30 @@
                 <header> Banco</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Razon Social">
+                <input type="text" class="input-field" placeholder="Razon Social" id="usu-banco" required>
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="input-box">
-            <input type="email" class="input-field" placeholder="Email">
+            <input type="email" class="input-field" placeholder="Email" id="mail-banco" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             
             <div class="input-box">
-                <input type="number" class="input-field" placeholder="CUIL">
+                <input type="number" class="input-field" placeholder="CUIL" required>
                 <i class="bx bx-user"></i>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña">
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirmar contraseña">
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="enviar">
+                <input type="submit" class="submit" id="btn-enviar" value="enviar" onclick="validacionBanco()">
             </div>
             
         </div>
@@ -64,31 +64,31 @@
                 </header>
             </div>
            <div class="input-box">
-            <input type="text" class="input-field" placeholder="Nombre y apellido">
+            <input type="text" class="input-field" placeholder="Nombre y apellido" required>
             <i class="bx bx-user"></i>
            </div>
             <div class="two-forms">
                 
                 <div class="input-box">
-                    <input type="date" class="input-field" >
+                    <input type="date" class="input-field" required>
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="number" class="input-field" placeholder="DNI">
+                    <input type="number" class="input-field" placeholder="DNI" required>
                     <i class="bx bx-user"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email">
+                <input type="text" class="input-field" placeholder="Email" required>
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña">
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirmar contraseña">
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             </div>
@@ -99,28 +99,11 @@
         </div>
     </div>
 </div>   
+<script src="assets/javascript/validacion.js">
 
-<script>
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
-    }
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
-    }
+</script>
+<script src="assets/javascript/formilario.js">
+
 </script>
 </body>
 </html>

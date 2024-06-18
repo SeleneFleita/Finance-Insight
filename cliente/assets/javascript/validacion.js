@@ -1,44 +1,39 @@
-const bancoForm = document.getElementById('bancoForm');
-const comunForm = document.getElementById("clienteForm")
-const inputs = document.querySelectorAll('#formulario input');
+const btnEnviar = document.getElementById('btn-enviar');
 
-const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	
-}
-
-const validarFormulario = (e)=>{
-    switch (e.target.name){
-        case "nombre":
-            if(expresiones.nombre.test(e.target.value)){
-
-            }else{
-                document.getElementById("nombre").classListadd(".formulario__grupo-correcto .formulario__validacion-estado")
-            }
-
-        break;
-        case "contraseña":
-            
-
-        break;
-        case "contraseña2":
-            
-
-        break;
-        case "email":
-            
-
-        break;
-    }
-}
-
-inputs.forEach((input)=>{
-input.addEventListener("keyup", ()=>{
+function validacionBanco(e) {
+    e.preventDefault();
+    const nombreDeUsuario = document.getElementById('usu-banco');
+    const direccionEmail = document.getElementById('mail-banco');
+    const errorUsuario = document.getElementById('error-usuario');
+    const errorEmail = document.getElementById('error-email');
     
-})
-})
-formulario.addEventListener("submit", (e)=>{
-e.preventDefault();
-})
+    // Limpiar mensajes de error
+    errorUsuario.textContent = "";
+    errorEmail.textContent = "";
+
+    let esValido = true;
+    
+    if (nombreDeUsuario.value.trim() === "") {
+        errorUsuario.textContent = "Por favor, escribe tu nombre de usuario.";
+        nombreDeUsuario.focus();
+        esValido = false;
+    }
+    
+    if (direccionEmail.value.trim() === "") {
+        errorEmail.textContent = "Por favor, escribe tu correo electrónico.";
+        direccionEmail.focus();
+        esValido = false;
+    } else if (!emailValido(direccionEmail.value.trim())) {
+        errorEmail.textContent = "Por favor, escribe un correo electrónico válido.";
+        direccionEmail.focus();
+        esValido = false;
+    }
+    
+    return esValido; // Se pueden enviar los datos del formulario al servidor si esValido es true
+}
+
+const emailValido = email => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+btnEnviar.addEventListener('click', validacionBanco);
