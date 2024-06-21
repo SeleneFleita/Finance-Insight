@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/estilos/reg.css">
+    <title> Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>LOGO .</p>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Banco</button>
+            <button class="btn" id="registerBtn" onclick="register()">Cliente</button>
+        </div>
+    </nav>
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- banco -------------------------->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span> <a href="#" onclick="register()">Cliente</a></span>
+                <header> Banco</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Razon Social" id="usu-banco" required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+            <input type="email" class="input-field" placeholder="Email" id="mail-banco" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            
+            <div class="input-box">
+                <input type="number" class="input-field" placeholder="CUIL" required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" id="btn-enviar" value="enviar" onclick="validacionBanco()">
+            </div>
+            
+        </div>
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span> <a href="#" onclick="login()">Banco</a></span>
+                <header>Cliente
+                </header>
+            </div>
+           <div class="input-box">
+            <input type="text" class="input-field" placeholder="Nombre y apellido" required>
+            <i class="bx bx-user"></i>
+           </div>
+            <div class="two-forms">
+                
+                <div class="input-box">
+                    <input type="date" class="input-field" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="number" class="input-field" placeholder="DNI" required>
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="enviar">
+            </div>
+            
+        </div>
+    </div>
+</div>   
+<script src="assets/javascript/validacion.js">
+
+</script>
+<script src="assets/javascript/formilario.js">
+
+</script>
+</body>
+</html>
