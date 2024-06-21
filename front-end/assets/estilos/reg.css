@@ -82,9 +82,7 @@ body{
 .login-container div p{
     display: none;
 }
-span a{
-    display: none;
-}
+
 .register-container{
     position: absolute;
     right: -520px;
@@ -186,6 +184,9 @@ header{
 @media only screen and (max-width: 540px) {
     .wrapper{
         min-height: 100vh;
+    }
+    header{
+        font-size: 10px;
     }
     .form-box{
         width: 100%;

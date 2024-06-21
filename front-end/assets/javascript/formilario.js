@@ -21,14 +21,14 @@ function register() {
     y.style.opacity = 1;
 }
 
-function validacionBanco() {
+async function validacionBanco() {
     var razonSocial = document.getElementById("usu-banco").value.trim();
     var email = document.getElementById('mail-banco').value.trim();
     var cuil = document.getElementById('cuil-banco').value.trim();
     var password = document.getElementById('pass-banco').value;
     var confirmPassword = document.getElementById('confirm-pass-banco').value;
 
-    //Validar todos lo campos obligatoriamente
+    // Validar todos los campos obligatoriamente
     if (razonSocial === '' || email === '' || cuil === '' || password === '' || confirmPassword === '') {
         alert('Por favor completa todos los campos.');
         return false;
@@ -46,7 +46,7 @@ function validacionBanco() {
         return false;
     }
 
-    // Validación del CUIL (debe tener exactamente 11 dígitos)
+    // Validación del CUIL (debe tener exactamente 11 dígitos numéricos)
     if (cuil.length !== 11 || isNaN(cuil)) {
         alert('El CUIL debe tener exactamente 11 dígitos numéricos.');
         return false;
@@ -60,20 +60,33 @@ function validacionBanco() {
     }
 
     // Si todas las validaciones son exitosas, se puede enviar el formulario
-    alert('Formulario validado correctamente. Se puede enviar.');
+    let datoBanco = {
+        "razonSocial": razonSocial,
+        "mail": email,
+        "CUIL": cuil,
+        "password": password
+    };
+
+    // Convertir a JSON los datos del banco
+    let datosBancoJSON = JSON.stringify(datoBanco);
+
+    // Enviar los datos al servidor
+    await enviarDatosAlServidor(datosBancoJSON);
+
     return true;
 }
 
-function validarRegistro() {
-    var nombreApellido = document.getElementById('nombreap-cliente').value.trim();
-    var fechaNacimiento = document.getElementById('fechanac-cliente').value.trim();
-    var dni = document.getElementById('dni-cliente').value.trim();
-    var email = document.getElementById('mail-cliente').value.trim();
-    var contraseña = document.getElementById('contracli-cliente').value;
-    var confirmarContraseña = document.getElementById('confconcli-cliente').value;
+
+async function validarRegistro() {
+    let nombreApellido = document.getElementById('nombreap-cliente').value.trim();
+    let fechaNacimiento = document.getElementById('fechanac-cliente').value.trim();
+    let dni = document.getElementById('dni-cliente').value.trim();
+    let email = document.getElementById('mail-cliente').value.trim();
+    let contrasena = document.getElementById('contracli-cliente').value;
+    let confirmarContrasena = document.getElementById('confconcli-cliente').value;
 
     // Validación de campos vacíos
-    if (nombreApellido === '' || fechaNacimiento === '' || dni === '' || email === '' || contraseña === '' || confirmarContraseña === '') {
+    if (nombreApellido === '' || fechaNacimiento === '' || dni === '' || email === '' || contrasena === '' || confirmarContrasena === '') {
         alert('Por favor completa todos los campos.');
         return false;
     }
@@ -98,12 +111,57 @@ function validarRegistro() {
     }
 
     // Validación de las contraseñas (deben ser iguales)
-    if (contraseña !== confirmarContraseña) {
+    if (contrasena !== confirmarContrasena) {
         alert('Las contraseñas no coinciden.');
         return false;
     }
 
     // Si todas las validaciones son exitosas, se puede enviar el formulario
-    alert('Formulario validado correctamente. Se puede enviar.');
-    return true;
+    let datosCliente = {
+        "NombreyApellido" : nombreApellido,
+        "Fecha de nacimiento": fechaNacimiento,
+        "DNI": dni,
+        "email": email,
+        "password": contrasena  // Corregido 'pasword' a 'password'
+    };
+
+    let datosClientesJSON = JSON.stringify(datosCliente);
+
+    // Enviar los datos al servidor y manejar la respuesta
+    try {
+        await enviarDatosAlServidor(datosClientesJSON);
+        return true;
+    } catch (error) {
+        console.error('Error al enviar datos al servidor:', error);
+        alert('Hubo un error al registrar el cliente.');
+        return false;
+    }
+}
+
+
+
+async function enviarDatosAlServidor(datosJSON) {
+    try {
+        const response = await fetch('http://localhost:3000/registrarCliente', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: datosJSON
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al registrar el cliente.'); // Lanzar un error si la respuesta no es exitosa
+        }
+
+        const data = await response.json(); // Convertir la respuesta a JSON
+        console.log(data); // Mostrar en consola la respuesta del servidor
+
+        // Redirigir al usuario al login después de registrar correctamente
+        window.location.href = 'front-end/assets/javascript/inicioS.js';
+        alert('Cliente registrado exitosamente.'); // Mostrar un mensaje de éxito al usuario
+    } catch (error) {
+        console.error('Error al enviar datos:', error); // Mostrar un error en consola si ocurre algún problema
+        alert('Hubo un error al registrar el cliente.'); // Mostrar un mensaje de error al usuario
+    }
 }
