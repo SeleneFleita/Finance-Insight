@@ -12,7 +12,7 @@
  <div class="wrapper">
     <nav class="nav">
         <div class="nav-logo">
-            <p>LOGO .</p>
+            <img src="assets/img/Finance-transformed2.png" height="80px" alt="">
         </div>
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Banco</button>
@@ -38,16 +38,16 @@
             </div>
             
             <div class="input-box">
-                <input type="number" class="input-field" placeholder="CUIL" required>
+                <input type="number" class="input-field" placeholder="CUIL" id="cuil-banco" required>
                 <i class="bx bx-user"></i>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" id="pass-banco" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" id="confirm-pass-banco" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             </div>
@@ -64,44 +64,41 @@
                 </header>
             </div>
            <div class="input-box">
-            <input type="text" class="input-field" placeholder="Nombre y apellido" required>
+            <input type="text" class="input-field" placeholder="Nombre y apellido" id="nombreap-cliente" required>
             <i class="bx bx-user"></i>
            </div>
             <div class="two-forms">
                 
                 <div class="input-box">
-                    <input type="date" class="input-field" required>
+                    <input type="date" class="input-field" id="fechanac-cliente" required>
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="number" class="input-field" placeholder="DNI" required>
+                    <input type="number" class="input-field" placeholder="DNI" id="dni-cliente" required>
                     <i class="bx bx-user"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Email" id="mail-cliente" required>
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña" required>
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" id="contracli-cliente" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirmar contraseña" required>
+                <input type="password" class="input-field" placeholder="Confirmar contraseña" id="confconcli-cliente" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="enviar">
+                <input type="submit" class="submit" value="enviar" onclick="validarRegistro()">
             </div>
             
         </div>
     </div>
 </div>   
-<script src="assets/javascript/validacion.js">
-
-</script>
 <script src="assets/javascript/formilario.js">
 
 </script>
