@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/estilos/contactanos.css">
+</head>
+<body>
+
+<div class="contact-container">
+    <div class="left-col">
+      
+    </div>
+    <div class="right-col">
+        <div class="theme-switch-wrapper">
+            <div class="description"></div>
+        </div>
+        
+        <h1>Contactanos</h1>
+        <h6>Contactanos</h6>
+        <p>Valoramos tu opinión. Tu comentario nos ayudará a mejorar nuestros servicios.</p>
+        
+        <form id="contact-form">
+            <label for="name">Nombre</label>
+            <input type="text" id="from_name" name="name" placeholder="Ricardo" required>
+            
+            <label for="email">Email</label> 
+            <input type="email" id="email" name="email" placeholder="ricardo@gmail.com" required>
+            
+            <label for="message">Mensaje</label>
+            <textarea rows="6" name="message" id="message" required></textarea>
+            
+            <button type="submit" id="button" name="submit" >Enviar</button> 
+        </form>
+        
+        <div id="error"></div>
+        <div id="success-msg"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('nx-5tMCeC94l6edpK')
+</script>
+
+
+
+<script src="assets/javascript/contactanos.js">
+</script>
+
+</body>
+</html>
