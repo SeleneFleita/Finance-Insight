@@ -12,7 +12,7 @@
     font-weight: 500px;
     font-size: 30px;
     height: 100px;
-    margin-right: 560px;
+    margin-right: 750px;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -53,8 +53,9 @@ footer {
   }
   .hr {
     height: 3px;
-    background-color: red;
+      background-color: #92b6f5;
   }
+
   section{
     min-height: 100vh;
     display: flex;

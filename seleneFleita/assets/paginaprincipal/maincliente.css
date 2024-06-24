@@ -22,9 +22,13 @@ form {
 }
 
 main {
-  background-color: #EEF3FF;
+  background-color: white;
 }
-
+.hr {
+  height: 3px;
+  
+    background-color: #92b6f5;
+}
 
 footer {
     background-color: #92b6f5;
@@ -54,7 +58,7 @@ footer {
   justify-content: space-between;
   border-radius: 30px;
   transition: 0.3s;
-  box-shadow: 0 0 22px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 22px 10px rgba(0, 0, 0, 0.3);
   margin-top: 8px;
 }
 
@@ -80,4 +84,5 @@ a {
 a :hover {
   text-decoration: none;
 }
+
 
