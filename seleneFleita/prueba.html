@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Gráfico</title>
+    <link rel="stylesheet" href="assets/gestion/gestion.css">
+</head>
+<style>
+    .navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;}
+    nav{
+        background-color: #92b6f5;
+    }
+   .navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
+</style>
+<body>
+    <header class="d-flex ">
+        <nav class="navbar col-12">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <img class="logo" src="assets/img/Finance-transformed2.png" /></a>
+              </button>
+              <span class="navbar-title divider hidden-xs" href="#">Inicio</span>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+        </div>
+              <div class="offcanvas offcanvas-start" style="background-image: url(assets/img/backgr.png) ;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FinanceInsight</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="miagenda.html">MiAgenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestion.html">Gestion monetaria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Emprendedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Banco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Comentarios
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-primary">
+                        <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+                        <li><a class="dropdown-item" href="#">Centro de quejas</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-content">
+                    <div class="personal-info">
+                        <h2>Información Personal</h2>
+                        <img src="assets/img/5987424.png" alt="Foto de perfil" class="avatar">
+                        <div class="info-item"><strong>Nombre:</strong> Juan Pérez</div>
+                        <div class="info-item"><strong>Email:</strong> juan.perez@ejemplo.com</div>
+                        <div class="info-item"><strong>Teléfono:</strong> +34 123 456 789</div>
+                        <div class="info-item"><strong>Fecha de nacimiento:</strong> 15/05/1990</div>
+                        <div class="info-item"><strong>Ocupación:</strong> Emprendedor</div>
+                    </div>
+                    <div class="courses">
+                        <h2>Sobre ti</h2>
+                        <button class="btn">Banco</button>
+                        <ul>
+                            <li>Cursos inscriptos</li>
+                            <li></li>
+                            <li>Estrategias de Ahorro e Inversión</li>
+                            <li></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </body>
+    </html>
+    

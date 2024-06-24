@@ -1,16 +1,7 @@
 .body {
   margin: 0;
   padding: 0;
-  min-height: 100vh
-}
-
-header {
-  background-color: #5f7e83;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: center;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 
 form {
@@ -25,8 +16,8 @@ form {
 }
 
 .logo {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   align-self: flex-start;
 }
 
@@ -36,7 +27,8 @@ main {
 
 
 footer {
-  background-color: #c4d9dc;
+    background-color: #92b6f5;
+
 }
 
 .botton {
@@ -47,11 +39,31 @@ footer {
 }
 
 .cartas {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: row;
   display: grid;
+  grid-template-columns: repeat(8, auto);
   grid-gap: 10px;
   gap: 60px;
-  display: flex;
-  flex-direction: row;
+
+}
+
+.card {
+  justify-content: space-between;
+  border-radius: 30px;
+  transition: 0.3s;
+  box-shadow: 0 0 22px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+}
+
+img :hover {
+  transform: scale(1.2);
+}
+
+.card:hover {
+  transform: scale(1.2);
 }
 
 .card {
@@ -64,3 +76,8 @@ footer {
 a {
   text-decoration: none;
 }
+
+a :hover {
+  text-decoration: none;
+}
+

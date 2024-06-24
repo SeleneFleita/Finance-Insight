@@ -1,0 +1,128 @@
+
+    .navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+    nav{
+        background-color: #92b6f5;
+    }
+   .navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
+main{
+    min-height: 100vh;
+}
+footer {
+    background-color: #92b6f5;
+
+}
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.profile-content {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .profile-content {
+        flex-direction: row;
+    }
+}
+.personal-info, .courses {
+    padding: 2rem;
+}
+.personal-info {
+    flex: 1;
+}
+.courses {
+    flex: 1;
+    background-color: #f8fafc;
+}
+h2 {
+    color: #2c5282;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    object-fit: cover;
+    border: 3px solid #e2e8f0;
+}
+.info-item {
+    margin-bottom: 0.75rem;
+}
+.info-item strong {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+li::before {
+
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+.btn {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #3182ce;
+}
