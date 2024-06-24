@@ -61,21 +61,25 @@ async function validacionBanco() {
 
     // Si todas las validaciones son exitosas, se puede enviar el formulario
     let datoBanco = {
-        "razon_social": "razonSocial",
-        "email_banco": "email",
-        "cuil": "cuil",
-        "pass_banco": "password"
+        "tipo_usuario": "banco",
+        "razon_social": razonSocial,
+        "email_banco": email,
+        "cuil": cuil,
+        "pass_banco": password
     };
 
     // Convertir a JSON los datos del banco
     let datosBancoJSON = JSON.stringify(datoBanco);
 
-    // Enviar los datos al servidor
-    await enviarDatosAlServidor(datosBancoJSON);
-
-    return true;
+    // Enviar los datos al servidor para registro de banco
+    try {
+        await enviarDatosAlServidor("http://127.0.0.1:5500/front-end/register.html", datosBancoJSON);
+        return true;
+    } catch (error) {
+        alert('Hubo un error al registrar el banco.');
+        return false;
+    }
 }
-
 
 async function validarRegistro() {
     let nombreApellido = document.getElementById('nombreap-cliente').value.trim();
@@ -118,32 +122,30 @@ async function validarRegistro() {
 
     // Si todas las validaciones son exitosas, se puede enviar el formulario
     let datosCliente = {
-        "tipoRegistro": "cliente",
-        "nombre_apellido" : "nombreApellido",
-        "fecha_nac": "fechaNacimiento",
-        "dni": "dni",
-        "mail_cliente": "email",
+        "tipo_usuario": "normal",
+        "nombre_apellido": nombreApellido,
+        "fecha_nac": fechaNacimiento,
+        "dni": dni,
+        "mail_cliente": email,
         "contrasenia": "contrasena"
     };
 
-    let datosClientesJSON = JSON.stringify(datosCliente);
+    // Convertir a JSON los datos del cliente
+    let datosClienteJSON = JSON.stringify(datosCliente);
 
-    // Enviar los datos al servidor y manejar la respuesta
+    // Enviar los datos al servidor para registro de cliente normal
     try {
-        await enviarDatosAlServidor(datosClientesJSON);
+        await enviarDatosAlServidor('http://127.0.0.1:5500/front-end/register.html', datosClienteJSON);
         return true;
     } catch (error) {
         console.error('Error al enviar datos al servidor:', error);
-        alert('Hubo un error al registrar el cliente.');
         return false;
     }
 }
 
-
-
-async function enviarDatosAlServidor(datosJSON) {
+async function enviarDatosAlServidor(url, datosJSON) {
     try {
-        const response = await fetch('http://localhost:3000/register', {
+        const response = await fetch('http://localhost:3003' + url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -152,7 +154,7 @@ async function enviarDatosAlServidor(datosJSON) {
         });
 
         if (!response.ok) {
-            throw new Error('Error al registrar el cliente.'); // Lanzar un error si la respuesta no es exitosa
+            throw new Error('Error al registrar el usuario.'); // Lanzar un error si la respuesta no es exitosa
         }
 
         const data = await response.json(); // Convertir la respuesta a JSON
@@ -160,9 +162,9 @@ async function enviarDatosAlServidor(datosJSON) {
 
         // Redirigir al usuario al login después de registrar correctamente
         window.location.href = 'front-end/assets/javascript/inicioS.js';
-        alert('Cliente registrado exitosamente.'); // Mostrar un mensaje de éxito al usuario
+        alert('Usuario registrado exitosamente.'); // Mostrar un mensaje de éxito al usuario
     } catch (error) {
-        console.error('Error al enviar datos:', error); // Mostrar un error en consola si ocurre algún problema
-        alert('Hubo un error al registrar el cliente.'); // Mostrar un mensaje de error al usuario
+         // Mostrar un error en consola si ocurre algún problema
+        alert('Hubo un error al registrar el usuario.', error); // Mostrar un mensaje de error al usuario
     }
 }

@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #010712;
     --secondary-color: #818386;
@@ -13,6 +14,45 @@
     --button-color: #818386;
     --h1-color: #FCFDFD;
   }
+
+  .navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;}
+    nav{
+        background-color: #92b6f5;
+    }
+   .navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
   
   * {
     margin: 0;
