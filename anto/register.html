@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Registro</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="assets/estilos/reg.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <nav class="nav">
+                <div class="nav-logo">
+                    
+                </div>
+                <div class="nav-button">
+                    <button class="btn white-btn" id="loginBtn" onclick="login()">Banco</button>
+                    <button class="btn" id="registerBtn" onclick="register()">Cliente</button>
+                </div>
+            </nav>
+        <!----------------------------- Form box ----------------------------------->    
+            <div class="form-box">
+                
+                <!------------------- banco -------------------------->
+                <div class="login-container" id="login">
+                    <div class="top">
+                        <span> <a href="#" onclick="register()">Cliente</a></span>
+                        <header> Banco</header>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Razon Social" id="usu-banco" required>
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-box">
+                    <input type="email" class="input-field" placeholder="Email" id="mail-banco" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="number" class="input-field" placeholder="CUIL" id="cuil-banco" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="two-forms">
+                        <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Ingresar contraseña" id="pass-banco" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Confirmar contraseña" id="confirm-pass-banco" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" id="btn-enviar" value="enviar" onclick="validacionBanco()">
+                    </div>
+                    
+                </div>
+                <!------------------- registration form -------------------------->
+                <div class="register-container" id="register">
+                    <div class="top">
+                        <span> <a href="#" onclick="login()">Banco</a></span>
+                        <header>Cliente
+                        </header>
+                    </div>
+                   <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nombre y apellido" id="nombreap-cliente" required>
+                    <i class="bx bx-user"></i>
+                   </div>
+                    <div class="two-forms">
+                        
+                        <div class="input-box">
+                            <input type="date" class="input-field" id="fechanac-cliente" required>
+                            <i class="bx bx-user"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="number" class="input-field" placeholder="DNI" id="dni-cliente" required>
+                            <i class="bx bx-user"></i>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Email" id="mail-cliente" required>
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="two-forms">
+                        <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Ingresar contraseña" id="contracli-cliente" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Confirmar contraseña" id="confconcli-cliente" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="enviar" onclick="validarRegistro()">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>   
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="assets/javascript/register.js"></script>
+    </body>
+</html>
