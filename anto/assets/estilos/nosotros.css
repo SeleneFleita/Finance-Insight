@@ -61,11 +61,13 @@ button {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+body{
+    background: url(https://trendomat.com/wp-content/uploads/2019/08/Drei-Farben-f%C3%BCrs-Heimb%C3%BCro-die-Gem%C3%BCtlichkeit-schaffen-und-Ihre-Kreativit%C3%A4t-f%C3%B6rdern.jpg);
+}
 #nosotros {
     min-height: 740px;
     width: 100%;
-    background-color: #fff;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,27 +78,35 @@ button {
 #nosotros h2 {
     color: #000000;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 30px;
     position: relative;
 }
 
 #nosotros #parrafo {
     width: 80%;
-    font-size: 1rem;
+    font-size: 1.05rem;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 1rem;
     white-space: normal;
     margin-bottom: 40px;
-    text-transform: uppercase;
+
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffffa4;
+    color: #000;
+    border-radius: 10px;
+    
+    
 }
 
 .cards {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    margin-top: 25px;
-}
+    margin-top: 30px;}
+    
 
 .cards .card {
     flex: 1;
@@ -133,10 +143,12 @@ button {
 
     #nosotros h2 {
         font-size: 1.5rem;
+
     }
 
     #nosotros #parrafo {
         width: 100%;
+        
     }
 
     .cards {
