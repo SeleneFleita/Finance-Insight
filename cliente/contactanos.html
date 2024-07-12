@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>FinanceInsight</title>
+        <title>Contactanos</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,101 +16,98 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="icon" href="assets/img/justlogo.png">
-        <link rel="stylesheet" href="assets/gestion/gestion.css">
+        <link rel="stylesheet" href="assets/estilos/contactanos.css">
     </head>
 
     <body>
-        <header>
-            <!-- place navbar here -->
             <header class="d-flex ">
-                <nav class="navbar col-12">
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        <img class="logo" src="assets/img/Finance-transformed2.png" /></a>
-                      </button>
-                      <span class="navbar-title divider hidden-xs" href="#">Gestion de Finanzas</span>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-dark" type="submit">Search</button>
-                    </form>
+        <nav class="navbar col-12">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <img class="nav-logo" src="assets/img/Finance-transformed2.png" width="
+                50px" /></a>
+              </button>
+              <span class="navbar-title divider hidden-xs" href="contactanos.html">Contactanos</span>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+        </div>
+              <div class="offcanvas offcanvas-start" style="background-image: url(assets/img/backgr.png) ;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FinanceInsight</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                      <div class="offcanvas offcanvas-start" style="background-image: url(assets/img/backgr.png) ;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FinanceInsight</h5>
-                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="miagenda.html">MiAgenda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="gestion.html">Gestion monetaria</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Emprendedores</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../mili/banco.html">Banco</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../mili/categorias.html">Cursos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                               Comentarios
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-primary">
-                                <li><a class="dropdown-item" href="../anto/sobreNosotros.html">Sobre nosotros</a></li>
-                                <li><a class="dropdown-item" href="../anto/contactanos.html">Centro de quejas</a></li>
-                                <li>
-                                  <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="../anto/ayuda.html">Ayuda</a></li>
-                              </ul>
-                            </li>
-                        </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-            </header>
-        </header>
-        <main>
-            <main>
-                <h1>Genera tu Gráfico</h1>
-                <div class="left">
-                    <select name="" id="tipo">
-                        <option value="circular">
-                            Gráfico Circular
-                        </option>
-                        <option value="columna">
-                            Gráfico de Columnas
-                        </option>
-                    </select>
-                    <input type="text" placeholder="Título del Gráfico" id="titulo">
-                    <div class="datos" id="datos">
-                        <div class="dato">
-                            <input type="text" placeholder="" class="serie">
-                            <input type="text" placeholder="Valor" class="valor">
-                        </div>
-                        <div class="dato">
-                            <input type="text" placeholder="" class="serie">
-                            <input type="text" placeholder="Valor" class="valor">
-                        </div>
-                    </div>
-                    <button onclick="agregarDato()" class="agregar"> + </button>
-                    <button onclick="cargarGrafico()" class="crear-grafico">Crear Gráfico</button>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="miAgenda.html">MiAgenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestion.html">Gestion monetaria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Emprendedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Banco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias.html">Cursos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Comentarios
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-primary">
+                        <li><a class="dropdown-item" href="sobreNostros.html">Sobre nosotros</a></li>
+                        <li><a class="dropdown-item" href="contactanos.html">Centro de quejas</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
+                      </ul>
+                    </li>
+                </ul>
                 </div>
-                <div class="right">
-                    <div id="piechart"></div>
-                </div>
-        </main>
+              </div>
+            </div>
+          </nav>
+    </header>
+<div class="contact-container">
+    <div class="left-col">
+      
+    </div>
+    <div class="right-col">
+        <div class="theme-switch-wrapper">
+            <div class="description"></div>
+        </div>
+        
+        <h1>Contactanos</h1>
+        <h6>Contactanos</h6>
+        <p>Valoramos tu opinión. Tu comentario nos ayudará a mejorar nuestros servicios.</p>
+        
+        <form id="contact-form">
+            <label for="name">Nombre</label>
+            <input type="text" id="from_name" name="name" placeholder="Ricardo" required>
+            
+            <label for="email">Email</label> 
+            <input type="email" id="email" name="email" placeholder="ricardo@gmail.com" required>
+            
+            <label for="message">Mensaje</label>
+            <textarea rows="6" name="message" id="message" required></textarea>
+            
+            <button type="submit" id="button" name="submit" >Enviar</button> 
+        </form>
+        
+        <div id="error"></div>
+        <div id="success-msg"></div>
+    </div>
+</div>
         <footer class="footer">
 
           <div class=" py-4 py-md-5 py-xl-8 border-top ">
@@ -173,9 +170,19 @@
             </div>
   
   </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="assets/gestion/gestion.js"></script>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('nx-5tMCeC94l6edpK')
+</script>
+
+
+
+<script src="assets/javascript/contactanos.js">
+</script>
+
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
