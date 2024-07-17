@@ -1,20 +1,21 @@
-import { sequelize, DataTypes } from '../bd/basedata';
+import { sequelize, DataTypes } from '../bd/basedata.js';
 
 // Modelo para inscripciones
 export const Enrollment = sequelize.define('enrollment', {
-    id_enrollment: {
+    enrollment_id: {
         type: DataTypes.INTEGER(5),
         autoIncrement: true,
         primaryKey: true
     },
-    id_client: {
+    client_id: {
         type: DataTypes.INTEGER(5), 
         allowNull: false,
         references: {
-            model : 'client',
-            key : 'id_client'
+            model: 'client',
+            key: 'id_client'
+        }
     },
-    id_course: {
+    course_id: {
         type: DataTypes.INTEGER(5),
         allowNull: true, 
         references: {
@@ -22,7 +23,7 @@ export const Enrollment = sequelize.define('enrollment', {
             key: 'id_course'
         }
     },
-    id_course_b: {
+    course_b_id: {
         type: DataTypes.INTEGER(5),
         allowNull: true,
         references: {
@@ -32,18 +33,14 @@ export const Enrollment = sequelize.define('enrollment', {
     },
     estado: {
         type: DataTypes.ENUM('activo', 'inactivo', 'completado'),
-        allowNull : false
+        allowNull: false
     },
-    fecha_inicio :{
+    fecha_inicio: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
-} }, { 
+}, { 
     freezeTableName: true,
     underscored: true,
 });
-
-
-
-

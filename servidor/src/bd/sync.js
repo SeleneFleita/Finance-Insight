@@ -1,10 +1,24 @@
 //importamos los modelos
-import {bank} from '../models/bank';
-import {client} from '../models/client';
-import {course_category} from '../models/course_category';
-import {CourseBank} from '../models/course.bank';
-import {course} from '../models/course';
-import {Enrollment} from '../models/Enrollment';
+import {bank} from '../model/bank.js';
+import {Client} from '../model/client.js';
+import {course_category} from '../model/course_category.js';
+import {CourseBank} from '../model/course.bank.js';
+import {course} from '../model/course.js';
+import {Enrollment} from '../model/Enrollment.js';
+import  { client_des } from '../model/client_des.js';
+import {sequelize} from "./basedata.js";
 
-//relaciones
-CourseBank.hasMany(bank, { foreignKey : "id_bank"});
+
+export const createTableAndRelations = async () => {
+    //relaciones 
+    
+    //creamos los modelos de tablas en la bade de datos
+    try {
+        await sequelize.sync({force : false})
+        console.log('Sincronizado correctamente');
+    } catch(error){
+    console.log('se produjo un error al sincronizar', error);
+    }
+}
+
+

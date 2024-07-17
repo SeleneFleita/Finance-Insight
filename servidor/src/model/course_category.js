@@ -1,4 +1,4 @@
-import {DataTypes, sequelize, Model} from '../bd/basedata';
+import {DataTypes, sequelize} from '../bd/basedata.js';
 
 export const course_category = sequelize.define("course_category", {
     id_category : {

@@ -1,4 +1,4 @@
-import { sequelize, DataTypes, Model } from "../bd/basedata";
+import { sequelize, DataTypes } from "../bd/basedata.js";
 
 export const bank = sequelize.define('bank', {
     id_bank: {
@@ -30,3 +30,4 @@ export const bank = sequelize.define('bank', {
     underscored: true,
     freezeTableName: true,
 });
+

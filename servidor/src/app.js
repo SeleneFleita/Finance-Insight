@@ -15,7 +15,11 @@ app.use(cors());
 // END
 //BASE DATA
 import { conectionDB } from "./bd/basedata.js";
+import {createTableAndRelations} from './bd/sync.js';
+//conexion
 conectionDB();
+//creacion 
+createTableAndRelations();
 //END
 
 //ROUTES
