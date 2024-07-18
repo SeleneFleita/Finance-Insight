@@ -1,6 +1,6 @@
 import { sequelize, DataTypes } from "../bd/basedata.js";
 
-export const Client = sequelize.define('client', {
+export const client = sequelize.define('client', {
     id_client: {
         type: DataTypes.INTEGER(5),
         autoIncrement: true,
@@ -13,15 +13,14 @@ export const Client = sequelize.define('client', {
     dni: {
         type: DataTypes.INTEGER(8),
         allowNull: false,
-        unique: true // Asegura que el DNI sea único
-    },
+        unique: true },
     mail_client: {
         type: DataTypes.STRING(25),
         allowNull: false,
-        unique: true // Asegura que el correo electrónico sea único
+        unique: true 
     },
     telefono_client: {
-        type: DataTypes.STRING(15), // Cambiado a STRING porque los números pueden contener caracteres especiales
+        type: DataTypes.STRING(15), 
         allowNull: false,
     },
     password_client: {

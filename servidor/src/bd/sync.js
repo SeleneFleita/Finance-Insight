@@ -1,7 +1,6 @@
 //importamos los modelos
 import {bank} from '../model/bank.js';
-import {Client} from '../model/client.js';
-import {course_category} from '../model/course_category.js';
+import {client} from '../model/client.js';
 import {CourseBank} from '../model/course.bank.js';
 import {course} from '../model/course.js';
 import {Enrollment} from '../model/Enrollment.js';

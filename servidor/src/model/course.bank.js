@@ -29,15 +29,12 @@ nivel : {
     underscored: true,
     type : DataTypes.STRING(15)
 },
-id_category : {
-    type : DataTypes.INTEGER(5), 
-    allowNull : false,
-    references: {
-        model : 'course_category',
-        key : 'id_category'
-    },
+category : {
+    type: DataTypes.ENUM('emprendedor', '', ''),
+    allowNull : false
+},
 }
-} , {
+, {
     freezeTableName: true,
     underscored: true,
 } 

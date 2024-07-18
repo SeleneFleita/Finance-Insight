@@ -26,16 +26,13 @@ descripcion : {
     type : DataTypes.STRING(300),
     allowNull : false
 }, 
-id_category : {
-    type : DataTypes.INTEGER(5), 
-    allowNull : false,
-    references: {
-        model : 'course_category',
-        key : 'id_category'
-    },
+category : {
+    type: DataTypes.ENUM('emprendedor', '', ''),
+    allowNull : false
+},
 nivel : {
     type : DataTypes.STRING(15)
-}}},
+}},
 
 {
     freezeTableName: true,

@@ -36,6 +36,6 @@ app.use(routerCourse);
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-    console.log("Servidor posicionado en el puerto", port);
+    console.log("Servidor posicionado en el puerto",port);
 });
 //END
