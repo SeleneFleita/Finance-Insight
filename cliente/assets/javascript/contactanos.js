@@ -1,5 +1,5 @@
 const btn = document.getElementById('button');
-
+const form = document.getElementById('contact-form')
 document.getElementById('contact-form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
@@ -13,8 +13,11 @@ document.getElementById('contact-form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      errorElement.textContent = "enviado";
-      
+      errorElement.textContent = "¡El mensaje ha sido enviado exitosamente!";
+      setTimeout(() => {
+        form.reset();
+        errorElement.textContent = ""
+    }, 3000);
     }, (err) => {
       btn.value = 'Send Email';
       (JSON.stringify(err));

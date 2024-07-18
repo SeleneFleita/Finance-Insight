@@ -35,9 +35,7 @@
     justify-content: space-between;
     
     }
-    .divider {
-    border-left: 1px solid #ededed;
-}
+    
 .logo {
   height: 90px;
   width: 90px;
@@ -56,35 +54,27 @@ border:0;
   
   * {
     margin: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    
+    
   }
   
-  .contact-container {
+body{
+  background-color:  #f8f8f8;
+}
+  .contact-container{
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    background: var(--bg-color);
-  }
+    justify-content: center;
+    align-items: center;
+    
   
-  .left-col {
-    width: 45vw;
-    height: 100%;
-    background: url("../img/Pinterest.jfif");
-    background-size: cover;
-    background-repeat: no-repeat;
   }
-  
-  .logo {
-    width: 10rem;
-    padding: 1.5rem;
-  }
-  
   .right-col {
     background: var(--bg-color);
-    width: 50vw;
-    height: 100vh;
+    max-width: 600px; /* Ancho máximo del formulario */
+    width: 100%;
     padding: 5rem 3.5rem;
+    background: none;
+    
   }
   
   h1, label, button, .description {
@@ -96,7 +86,8 @@ border:0;
   h1 {
     color:var(--h1-color);
     text-transform: uppercase;
-    font-size: 2.5rem;
+   
+    font-size: 2.8rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
   }
@@ -105,7 +96,7 @@ border:0;
   }
   
   p {
-    color: var(--secondary-color);
+    color: black;
     font-size: 0.9rem;
     letter-spacing: 0.01rem;
     width: 40vw;
@@ -119,15 +110,22 @@ border:0;
   }
   
   form {
-    width: 31.25rem;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; 
     position: relative;
     margin-top: 2rem;
     padding: 1rem 0;
+    
   }
   
   input, textarea, label {
     width: 40vw;
     display: block;
+    color: #010712;
   }
   
   p, placeholder, input, textarea {
@@ -135,30 +133,47 @@ border:0;
   }
   
   input::placeholder, textarea::placeholder {
-    color: var(--primary-color);
+    color: black;
   }
   
   input, textarea {
-    color: var(--primary-color);
+    color: black;
     font-weight: 500;
     background: var(--bg-color);
-    border: none;
-    border-bottom: 1px solid var(--secondary-color);
     padding: 0.5rem 0;
     margin-bottom: 1rem;
     outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(66, 18, 18, 0.829); /* Agregar sombra */
   }
-  
   textarea {
     resize: none;
   }
   
+  #contact-form button {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: var(--button-color);
+    color: var(--bg-color);
+    width: 13rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    
+} 
   button {
     text-transform: uppercase;
     font-weight: 300;
     background: var(--button-color);
     color: var(--bg-color);
-    width: 10rem;
+    width: 13rem;
     height: 2.25rem;
     border: none;
     border-radius: 2px;
@@ -166,13 +181,8 @@ border:0;
     cursor: pointer;
   }
   
-  input:hover, textarea:hover, button:hover {
-    opacity: 0.5;
-  }
-  
-  button:active {
-    opacity: 0.8;
-  }
+
+
   footer {
     background-color: #92b6f5;
   
