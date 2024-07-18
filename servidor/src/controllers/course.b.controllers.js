@@ -1,15 +1,17 @@
 import {CourseBank} from '../model/course.bank.js';
 import {bank} from '../model/bank.js';
-
+//crear curso
 export const crearcoursBank = async (req, res) => {
-    const {nombre, duracion , descripcion, nivel, category, razon_social, cuit} = req.body
+    const {nombre, duracion , descripcion, nivel, category} = req.body
+    const id_bank = +req.params.id_bank
     try {
-        const foundBank = await bank.findOne({where: {
-            cuit : cuit
-        }})
+        const foundBank = await bank.findByPk(id_bank)
+        if (!foundBank) {
+            return res.status(404).json({message: 'El usuario no ha sido encontrado'})
+        }
     
         const createCourse = await CourseBank.create ({
-            id_bank : foundBank.id_bank,
+            id_bank : id_bank,
             nombre,
             duracion,
             descripcion,
@@ -26,9 +28,9 @@ export const crearcoursBank = async (req, res) => {
         })
     }
 }
-
+//buscar curso
 export const BuscarCourseB = async (req, res) => {
-    const {nombre} = req.body.nombre
+    const {nombre} = req.params.nombre
 
     try {
         const courseFound = await CourseBank.findOne({where : {nombre : nombre}})
@@ -43,9 +45,9 @@ export const BuscarCourseB = async (req, res) => {
     }
     
 }
-
+//editar curso
 export const editarCurso = async (req, res) => {
-    const id = req.body.id_course_b;
+    const id = +req.params.id_course_b ;
     const { nombre, duracion, descripcion, nivel, category } = req.body;
     try {
         // Buscar el curso por su ID
@@ -64,26 +66,23 @@ export const editarCurso = async (req, res) => {
         // Responder con éxito
         res.status(200).json({ message: 'Curso editado correctamente', curso: cursoEncontrado });
     } catch (error) {
-        // Manejar errores
-        console.error('Error al editar el curso:', error);
         res.status(500).json({ message: 'Se produjo un error al editar el curso', error });
     }
 };
 
+//eliminar curso
 export const eliminarCursoB = async (req, res) => {
-    const id = req.body.id_course_b;
+    const id = +req.params.id_course_b ;
     try {
-        const curso = await CourseBank.findByPk(id)
-        if(!curso){
-            return res.status(404).json({message: 'El curso que desea eliminar no ha sido encontrado'})
+        // Buscar el curso por su ID
+        const curso = await CourseBank.findByPk(id);
+        if (!curso) {
+            return res.status(404).json({ message: 'El curso que desea eliminar no ha sido encontrado' });
         }
-        //eliminar curso
-        curso.destroy();
-        res.json({message: 'El usuario ha sido eliminado correctamente'})
-
+        // Eliminar el curso de la base de datos
+        await curso.destroy();
+        res.json({ message: 'El curso ha sido eliminado correctamente' });
     } catch (error) {
-        res.status(500).json({
-            message: 'Se produjo un error', error
-        })
+        res.status(500).json({ message: 'Se produjo un error al eliminar el curso', error });
     }
-}
+};
