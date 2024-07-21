@@ -44,7 +44,29 @@ export const registerClient = async (req, res) => {
     res.status(500).send('se produjo un error', error)
     }
 }
-
+//inicio sesion 
+export const inicioSesionClient = async (req, res) =>{
+    const {email, password} = req.body;
+    try {
+        const existeClient = await client.findOne({where: {email : email}})
+    if (!existeClient) {
+        return res.status(404).json({message: 'El mail que ingreso no existe en nuestro sistema'})
+    }
+    const validarPassword = await bcrypt.compare(password, existeClient.password_client)
+    if (!validarPassword) {
+        return res.json({message: 'La contraseña ingresada es incorrecta'})
+    }
+    const token = jwt.sign({id : existeClient.id_client}, 'my_secret')
+    res.status(201).json({
+        status: 201,
+        message : 'usuario banco logeado correctamente ',
+        token
+    })
+    } catch (error) {
+        res.status(500).send('se produjo un error', error)
+    
+    }
+}
 //editar usuario
 export const editarDatosCliente = async (req, res) => {
     const id = +req.params.id_client
@@ -68,7 +90,7 @@ export const editarDatosCliente = async (req, res) => {
     }
 }
 
-
+//editar password
 export const editarContraseniaClient = async (req, res) => {
     const id = +req.params.id_client; // Suponiendo que el id del cliente viene como parte de la URL, por ejemplo, /clientes/:id/editar-contrasenia
     const { new_password, password } = req.body;
@@ -99,7 +121,7 @@ export const editarContraseniaClient = async (req, res) => {
         res.status(500).json({ message: 'Se produjo un error al editar la contraseña', error });
     }
 };
-
+//eliminar cuenta
 export const eliminarCliente = async (req, res) => {
     const id = +req.params.id_client;
     try {

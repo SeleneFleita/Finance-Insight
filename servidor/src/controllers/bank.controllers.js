@@ -39,7 +39,29 @@ export const registerBank = async (req, res) => {
         res.status(500).send('se produjo un error', error)
     }
 }
-
+export const inicioSesionBank = async (req, res) =>{
+    const {email, password} = req.body;
+    try {
+        const existeBanco = await bank.findOne({where: {email : email}})
+    if (!existeBanco) {
+        return res.status(404).json({message: 'El mail que ingreso no existe en nuestro sistema'})
+    }
+    const validarPassword = await bcrypt.compare(password, existeBanco.password_bank)
+    if (!validarPassword) {
+        return res.json({message: 'La contraseña ingresada es incorrecta'})
+    }
+    const token = jwt.sign({id : existeBanco.id_bank}, 'my_secret')
+    res.status(201).json({
+        status: 201,
+        message : 'usuario banco logeado correctamente ',
+        token
+    })
+    } catch (error) {
+        res.status(500).send('se produjo un error', error)
+    
+    }
+    
+}
 export const editarDatosBanco = async (req, res) => {
     const id = +req.params.id_bank
     const {razon_social, mail_bank, telefono} = req.body
