@@ -1,16 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>ayuda</title>
+    <title>Perfil-Banco</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-  <!-- Font Awesome para iconos -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/estilos/ayuda.css">
+
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -18,85 +16,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <style>
-      
-:root {
-    --primary-color: #010712;
-    --secondary-color: #818386;
-    --bg-color: #FCFDFD;
-    --button-color: #3B3636;
-    --h1-color: #3F444C;
-  }
-  
-  [data-theme="dark"] {
-    --primary-color: #FCFDFD;
-    --secondary-color: #818386;
-    --bg-color: #010712;
-    --button-color: #818386;
-    --h1-color: #FCFDFD;
-  }
-
-  .navbar{
-    min-height: 50px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;}
-    nav{
-        background-color: #92b6f5;
-    }
-   .navbar-title{
-    font-family: naturasans;
-    font-weight: 500px;
-    font-size: 30px;
-    height: 100px;
-    margin-right: 600px;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    
-    }
-    
-.logo {
-  height: 90px;
-  width: 90px;
-}
-button{
-border-radius:10px;
-outline:none;
-outline-color: transparent;
-border:0;
-}
-.navbar-toggler{
-    border-radius:10px;
-outline:none;
-border:0;
-} 
-footer {
-  background-color: #92b6f5;
-
-}
-  
-  main{
-   display: flex;
-   justify-content: center;
-    flex-direction: column ;
-  }
-  .hr {
-    height: 3px;
-      background-color: #92b6f5;
-  }
-
-  section{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-
-
-  }
-
-  
-    </style>
+    <link rel="stylesheet" href="../assets/estilos/banco.css">
   </head>
 
 
@@ -108,7 +28,7 @@ footer {
             <span class="navbar-toggler-icon"></span>
             <img class="logo" src="assets/img/Finance-transformed2.png" /></a>
           </button>
-          <span class="navbar-title divider hidden-xs" href="pagPrincipal.html"></span>
+          <span class="navbar-title divider hidden-xs" href=""></span>
        
     </div>
           <div class="offcanvas offcanvas-start" style="background-image: url(assets/img/backgr.png) ;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
@@ -155,147 +75,76 @@ footer {
         </div>
       </nav>
 </header>
-
-<div id="hero">
-  <div class="container">
-      <div class="row">
-          <div class="six columns">
-              <div class="contenido-hero">
-                  <h2>Centro de Ayuda</h2>
-                  <p>¿En que te podemos ayudar?</p>
-                  <form action="#" id="busqueda" method="post" class="formulario">
-                      <input class="u-full-width" type="text" placeholder="" id="buscador">
-                      <input type="submit" id="submit-buscador" class="submit-buscador">
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="container">
+    <main class="main-content">
+        
+        <div class="profile-card">
+            <div class="profile-content">
+                <div class="personal-info">
+                    <h2>Información Personal</h2>
+                    <img src="assets/img/5987424.png" alt="Foto de perfil" class="avatar">
+                    <div class="info-item"><strong>Razon social:</strong> Banco Formosa</div>
+                    <div class="info-item"><strong>Email:</strong> bancoformosa@gmail.com</div>
+                        
+                </div>
+                <div class="courses">
+                    <h6><b>Operaciones personales</b></h6>
+                    <ul> 
+                        <li><a href="#" id="cambioClave">Cambio de clave</a></li>
+                        <li><a href="#" id="verDatos">Mis datos</a></li>
+                        <li><a href="#">Mis cursos</a></li> 
+                        <li><a href="#">Editar información personal</a></li>
+                        <li><a href="#">Cerrar cuenta</a></li> 
+                    </ul>
+                    <h6><b>Recursos</b></h6>
+                    <ul>
+                        <li><a href="#">Crear curso</a></li>
+                        <li><a href="#">Editar curso</a></li>
+                        <li><a href="#">Eliminar curso</a></li>
+                        <li><a href="/politicas-privacidad.html">Políticas de privacidad</a></li>
+                        <li><a href="/ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
 </div>
-  <div class="contenedor">
-    <div class="text-center" style="background-color: #b9d3e0;">
-      <img src="assets/img/educacion.jpg" alt="" class="img-fluid">
+
+<!-- Modal para mostrar los datos personales -->
+<div id="modalDatos" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Mis Datos Personales</h2>
+        <p><strong>Razón Social:</strong> Banco Formosa</p>
+        <p><strong>CUIT:</strong> 30-12345678-9</p>
+        <p><strong>Email:</strong> bancoformosa@gmail.com</p>
+        <p><strong>Telefono:</strong> 1123568793</p>
     </div>
-    <div class="container mt-5">
-      <h2 class="text-center mb-4">Consultas</h2>
-  
-      <div id="accordion">
-        <!-- Consulta 1 -->
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                ¿Cómo puedo acceder a los cursos?
-              </button>
-            </h5>
-          </div>
-  
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore vero veritatis possimus dolores voluptatum enim veniam! Maiores quis consequatur nemo reprehenderit, magni, fugit, repellat iusto nulla aspernatur quas placeat aperiam.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 2 -->
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                ¿Cómo puedo acceder a los cursos que proporciona el banco?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 3 -->
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                ¿Cómo puedo utilizar mi agenda?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 4 -->
-        <div class="card">
-          <div class="card-header" id="headingFour">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                ¿Cómo actualizar mi información personal?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 5 -->
-        <div class="card">
-          <div class="card-header" id="headingFive">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                ¿Cómo puedo recuperar mi cuenta?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 6 -->
-        <div class="card">
-          <div class="card-header" id="headingSix">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                ¿Cómo utilizar el generador de gráficos?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 7 -->
-        <div class="card">
-          <div class="card-header" id="headingSeven">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                ¿Cómo puedo acceder a mi historial de cursos?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur similique enim repudiandae perferendis earum eaque distinctio deleniti repellendus architecto, accusamus quos tempora magni ipsam amet odit placeat! Dolores, numquam neque.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+</div>
+<!-- Modal para cambio de clave-->
+<div id="modalCambioClave" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cambio de Contraseña</h2>
+        <form>
+            <label for="currentPassword">Contraseña Actual:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required><br><br>
+            
+            <label for="newPassword">Nueva Contraseña:</label>
+            <input type="password" id="newPassword" name="newPassword" required><br><br>
+            
+            <label for="confirmPassword">Confirmar Nueva Contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            
+            <button type="submit" class="btn">Cambiar Contraseña</button>
+        </form>
     </div>
-  </div>
-  
+
+</div>
+
+
+
 
   <footer class="footer">
 
@@ -359,6 +208,7 @@ footer {
       </div>
 
 </footer>
+<script src="assets/javascript/banco.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -10,7 +10,7 @@ import {sequelize} from "./basedata.js";
 
 export const createTableAndRelations = async () => {
     //relaciones 
-    
+    CourseBank.belongsTo(Bank, { foreignKey: 'id_bank', targetKey: 'id_bank' });
     //creamos los modelos de tablas en la bade de datos
     try {
         await sequelize.sync({force : false})

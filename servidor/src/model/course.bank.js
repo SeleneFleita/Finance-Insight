@@ -14,6 +14,9 @@ id_bank: {
         key : 'id_bank'
     }
 },
+perfil_: {
+    
+},
 nombre :{
     type : DataTypes.STRING(50)
 },
