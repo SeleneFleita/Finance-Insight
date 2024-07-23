@@ -1,41 +1,39 @@
-//IMPORTS
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
+//IMPORTAMOS 
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
 
-
+//creamos app
 const app = express();
-//END
+//FIN
 
 //MIDDLEWARE
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(morgan());
 app.use(cors());
+//FIN MIDDLEWARE
 
-// END
-//BASE DATA
-import { conectionDB } from "./bd/basedata.js";
-import {createTableAndRelations} from './bd/sync.js';
-//conexion
-conectionDB();
-//creacion 
-createTableAndRelations();
-//END
 
-//ROUTES
-import routerBank from "./router/bank.router.js";
-import routerClient from "./router/client.router.js";
-import routerCourse from "./router/course.router.js";
+//conexion a la base de datos
+import {conexionBD} from './bd/basedata.js';
+conexionBD();
 
-app.use(routerBank);
-app.use(routerClient);
-app.use(routerCourse);
-//END
+//FIN CONEXION BD
 
-//SERVER CONECTION
-const port = process.env.PORT || 4000;
+//RUTAS
+//importamos
+import {bankRouter} from './routes/bank.router.js';
+import {routerClient} from './routes/client.router.js';
 
-app.listen(port, () => {
-    console.log("Servidor posicionado en el puerto",port);
-});
-//END
+//ponemos en uso
+app.use(bankRouter)
+app.use(routerClient)
+
+
+//FIN RUTAS
+
+
+//PONER EN ESCUCHA
+const port = process.env.PORT || 4000
+app.listen(port , console.log("Funcionando en el puerto ", port))
+//FIN

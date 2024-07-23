@@ -1,26 +1,15 @@
-import { Sequelize, Model, DataTypes } from 'sequelize';
+import mysql from 'mysql2/promise';
 
-// Configuración de Sequelize 
-export const sequelize = new Sequelize(
-    "finance",      
-    "root",      
-    "",  
-    {
-        host: "localhost",      
-        dialect: 'mysql'                
-    }
-);
-
-// Función para conectar a la base de datos
-export const conectionDB = async () => {
+export const conexionBD = async ()=> {
     try {
-        await sequelize.authenticate();
-        console.log('Conexion a la base de datos exitosa');
+        await mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "", 
+            database: "finance"
+        })
+        console.log("conexion a la base de datos exitosas");
     } catch (error) {
-        console.error('Error al conectar a la base de datos:', error);
+        console.log("Se produjo un error", error);
     }
 }
-conectionDB()
-
-export { Model, DataTypes }
-
