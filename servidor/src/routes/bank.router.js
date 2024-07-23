@@ -5,9 +5,9 @@ import {loginBank, registerBank} from '../controllers/bank.js';
 export const bankRouter = Router()
 
 //ruta para logearse
-bankRouter.get('/api/login', loginBank )
+bankRouter.get('/api/loginbanco', loginBank )
 
 //ruta para registrarse 
-bankRouter.post('/api/register', registerBank)
+bankRouter.post('/api/registerbanco', registerBank)
 
 

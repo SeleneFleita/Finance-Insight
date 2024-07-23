@@ -24,11 +24,12 @@ conexionBD();
 //importamos
 import {bankRouter} from './routes/bank.router.js';
 import {routerClient} from './routes/client.router.js';
+import {courseB} from './routes/cursoB.router.js';
 
 //ponemos en uso
 app.use(bankRouter)
 app.use(routerClient)
-
+app.use(courseB)
 
 //FIN RUTAS
 

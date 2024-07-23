@@ -8,4 +8,4 @@ export const routerClient = Router()
 routerClient.get('/api/loginclient', loginClient);
 
 //ruta para registrar usuario
-routerClient.post('/api/registerclient', registerClient)
+routerClient.post('/api/registerclient', registerClient);
