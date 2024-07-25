@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/estilos/reg.css">
+    <link rel="stylesheet" href="../assets/estilos/reg.css">
     <title>Registration</title>
     <style>
 
@@ -25,7 +25,7 @@
         <div class="form-box">
             <div class="login-container" id="login">
                 <div class="top">
-                    <span><a href="#" onclick="register()">Cliente</a></span>
+                    <span><a href="#" onclick="register()">Registrar como cliente</a></span>
                     <header>Banco</header>
                 </div>
                 <div class="input-box">
@@ -38,6 +38,42 @@
                     <i class="bx bx-lock-alt"></i>
                     <span id="error-email-banco" class="error-message"></span>
                 </div>
+                <div class="input-box">
+                    <input type="number" class="input-field" placeholder="Numero de Telefono" id="telefono-cliente" required>
+                    <span id="error-mail-cliente" class="error-message"></span>
+                </div>
+                
+                    <div class="input-box">
+                        <label for="provincia">Selecciona tu provincia:</label>
+                        <div class="custom-select">
+                            <select id="provincia" name="provincia">
+                                <option value="buenosaires">Buenos Aires</option>
+                                <option value="catamarca">Catamarca</option>
+                                <option value="chaco">Chaco</option>
+                                <option value="chubut">Chubut</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="corrientes">Corrientes</option>
+                                <option value="entre rios">Entre Ríos</option>
+                                <option value="formosa">Formosa</option>
+                                <option value="jujuy">Jujuy</option>
+                                <option value="lapampa">La Pampa</option>
+                                <option value="larioja">La Rioja</option>
+                                <option value="mendoza">Mendoza</option>
+                                <option value="misiones">Misiones</option>
+                                <option value="neuquen">Neuquén</option>
+                                <option value="rionegro">Río Negro</option>
+                                <option value="salta">Salta</option>
+                                <option value="sanjuan">San Juan</option>
+                                <option value="sanluis">San Luis</option>
+                                <option value="santacruz">Santa Cruz</option>
+                                <option value="santafe">Santa Fe</option>
+                                <option value="santiago">Santiago del Estero</option>
+                                <option value="tierradelfuego">Tierra del Fuego</option>
+                                <option value="tucuman">Tucumán</option>
+                            </select>
+                        </div>
+                        <span id="error-fechanac-cliente" class="error-message"></span>
+                    </div>
                 <div class="input-box">
                     <input type="number" class="input-field" placeholder="CUIL" id="cuil-banco" required>
                     <i class="bx bx-user"></i>
@@ -63,7 +99,7 @@
             
             <div class="register-container" id="register">
                 <div class="top">
-                    <span><a href="#" onclick="login()">Banco</a></span>
+                    <span><a href="#" onclick="login()">Registrar como Entidad Banco</a></span>
                     <header>Cliente</header>
                 </div>
                 <div class="input-box">
@@ -84,6 +120,47 @@
                     <input type="text" class="input-field" placeholder="Email" id="mail-cliente" required>
                     <span id="error-mail-cliente" class="error-message"></span>
                 </div>
+                <div class="input-box">
+                    <input type="number" class="input-field" placeholder="Numero de Telefono" id="telefono-cliente" required>
+                    <span id="error-mail-cliente" class="error-message"></span>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <label for="provincia">Selecciona tu provincia:</label>
+                        <div class="custom-select">
+                            <select id="provincia" name="provincia">
+                                <option value="buenosaires">Buenos Aires</option>
+                                <option value="catamarca">Catamarca</option>
+                                <option value="chaco">Chaco</option>
+                                <option value="chubut">Chubut</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="corrientes">Corrientes</option>
+                                <option value="entre rios">Entre Ríos</option>
+                                <option value="formosa">Formosa</option>
+                                <option value="jujuy">Jujuy</option>
+                                <option value="lapampa">La Pampa</option>
+                                <option value="larioja">La Rioja</option>
+                                <option value="mendoza">Mendoza</option>
+                                <option value="misiones">Misiones</option>
+                                <option value="neuquen">Neuquén</option>
+                                <option value="rionegro">Río Negro</option>
+                                <option value="salta">Salta</option>
+                                <option value="sanjuan">San Juan</option>
+                                <option value="sanluis">San Luis</option>
+                                <option value="santacruz">Santa Cruz</option>
+                                <option value="santafe">Santa Fe</option>
+                                <option value="santiago">Santiago del Estero</option>
+                                <option value="tierradelfuego">Tierra del Fuego</option>
+                                <option value="tucuman">Tucumán</option>
+                            </select>
+                        </div>
+                        <span id="error-fechanac-cliente" class="error-message"></span>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" class="input-field" placeholder="DNI" id="dni-cliente" required>
+                        <span id="error-dni-cliente" class="error-message"></span>
+                    </div>
+                </div>
                 <div class="two-forms">
                     <div class="input-box">
                         <input type="password" class="input-field" placeholder="Ingresar contraseña" id="contracli-cliente" required>
@@ -102,6 +179,6 @@
         </div>
     </div>
     
-    <script src="assets/javascript/register.js"></script>
+    <script src="../assets/javascript/register.js"></script>
 </body>
 </html>

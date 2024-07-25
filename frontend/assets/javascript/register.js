@@ -23,15 +23,49 @@ function register() {
 }
 
 console.log("hola mundo");
+
+async function registrarClient(e) {
+    e.preventDefault();
+    // Valores del input
+const nombre_apellido = document.getElementById("nombreap-cliente").value;
+const fecha_nac = document.getElementById("fechanac-cliente").value.trim();
+const dni = document.getElementById("dni-cliente").value.trim();
+const mail_client = document.getElementById("mail-cliente").value.trim();
+const telefono_client = document.getElementById("telefono-cliente").value.trim();
+const password_client = document.getElementById("contracli-cliente").value;
+const country = document.getElementById("pais-cliente").value;
+const province = document.getElementById("province-cliente").value.trim();
+
+const peticion = await fetch('http://localhost:4000/api/client/register', {
+    method: 'POST',
+    body: JSON.stringify({nombre_apellido, fecha_nac, dni, mail_client, telefono_client, password_client, country, province}),
+    headers: {
+        'Content-type': 'application/json'
+    }   
+})
+const respuesta = await peticion.json();
+
+if (!peticion.ok) {
+    //si falla
+    alert(respuesta.msg)
+} else {
+    alert(respuesta.msg)
+    //redirigir
+    window.location.href = 'frontend/reg-log/inicioSesion.html'
+}
+form.addEventListener('submit', register);
+}
 //validar cliente
 function validarCliente() {
 // Valores del input
-const nypcliente = document.getElementById("nombreap-cliente").value.trim();
+const nypcliente = document.getElementById("nombreap-cliente").value;
 const fechanac = document.getElementById("fechanac-cliente").value.trim();
 const dni = document.getElementById("dni-cliente").value.trim();
 const mail = document.getElementById("mail-cliente").value.trim();
-const con = document.getElementById("contracli-cliente").value.trim();
-const confir = document.getElementById("confconcli-cliente").value.trim();
+const con = document.getElementById("contracli-cliente").value;
+const confir = document.getElementById("confconcli-cliente").value;
+const country = document.getElementById("pais-cliente").value;
+const province = document.getElementById("mail-cliente").value.trim();
 
 // Errores
 const errnypcliente = document.getElementById("error-nombreap-cliente");
@@ -45,7 +79,8 @@ const errorform = document.getElementById("error-form");
 // Expresiones regulares para validar
 const validar = {
 nombreyapellido: /^[a-zA-ZÀ-ÿ\u00f1\u00d1\s']+$/, // Nombre y apellido solo letras y espacios
-mail: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ // Correo electrónico válido
+mail: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // Correo electrónico válido
+dosPalabras: /^[a-zA-Z]+\s[a-zA-Z]+$/  // Expresión regular para validar dos palabras separadas por espacio
 };
 
 // Validar nombre y apellido
@@ -55,6 +90,14 @@ errnypcliente.classList.add("error-message");
 }else{
 errnypcliente.textContent = "";
 errnypcliente.classList.remove("error-message");
+}
+//validar nombre y apellido
+if (!validar.dosPalabras.test(nypcliente)) {
+    errnypcliente.textContent = "El nombre y apellido son obligatorios";
+    errnypcliente.classList.add("error-message");
+} else {
+    errnypcliente.textContent = "";
+    errnypcliente.classList.remove("error-message");
 }
 //validar longitud
 if (nypcliente.length < 8) {
@@ -121,7 +164,11 @@ errorform.classList.add("error-message");
 errorform.textContent = "";
 errorform.classList.remove("error-message");
 }
+
+registrarClient()
 }
+
+
 
 function validarBanco(){
     //valores ingresados por los input
