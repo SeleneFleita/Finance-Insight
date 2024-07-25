@@ -3,7 +3,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-//creamos app
+//
 const app = express();
 //FIN
 
@@ -14,27 +14,25 @@ app.use(cors());
 //FIN MIDDLEWARE
 
 
-//conexion a la base de datos
-import {conexionBD} from './bd/basedata.js';
-conexionBD();
+//CONEXION BD
+import {pool} from './bd/basedata.js';
+pool;
 
 //FIN CONEXION BD
 
 //RUTAS
 //importamos
 import {bankRouter} from './routes/bank.router.js';
-import {routerClient} from './routes/client.router.js';
-import {courseB} from './routes/cursoB.router.js';
+
 
 //ponemos en uso
 app.use(bankRouter)
-app.use(routerClient)
-app.use(courseB)
+
 
 //FIN RUTAS
 
 
-//PONER EN ESCUCHA
+//SERVIDOR 
 const port = process.env.PORT || 4000
 app.listen(port , console.log("Funcionando en el puerto ", port))
 //FIN
