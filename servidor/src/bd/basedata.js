@@ -1,15 +1,10 @@
-import mysql from 'mysql2/promise';
+import {createPool} from 'mysql2/promise';
 
-export const conexionBD = async ()=> {
-    try {
-        await mysql.createConnection({
-            host: "localhost",
-            user: "root",
-            password: "", 
-            database: "finance"
-        })
-        console.log("conexion a la base de datos exitosas");
-    } catch (error) {
-        console.log("Se produjo un error", error);
-    }
-}
+export const pool = createPool({
+    host: "localhost",
+    port: 3306,
+    database: "finance",
+    user: "root",
+    password: "", 
+})
+
