@@ -12,15 +12,11 @@ export const registerBank = async (req, res) => {
         const existeUser = await pool.query('SELECT cuit FROM bank WHERE cuit = ? ', [cuit]);
         if (existeUser.length > 0) {
             return res.status(400).json({ message: "El usuario que desea registrar ya existe en nuestro sistema" });
-        }else{
+        }
     // Encriptar la contraseña
         const hashedPassword = await bcrypt.hash(password_bank, 5);
-    // Obtener id_country y id_province
         
-
-        
-        
-        // Consulta de inserción
+        // Consulta 
         const sql = 'INSERT INTO bank (razon_social, cuit, mail_bank, telefono_bank, id_counyprov,  password_bank ) VALUES (?, ?, ?, ?, ?, ?)';
         
         const [pc] = await pool.query('SELECT cp.id_counyprov FROM country_province cp JOIN province p ON cp.id_province = p.id_province JOIN country c ON cp.id_country = c.id_country WHERE p.nombre = ? AND c.nombre = ?; ', [province, country])
@@ -29,7 +25,7 @@ export const registerBank = async (req, res) => {
         const result = await pool.query(sql, [razon_social, cuit, mail_bank, telefono,id_counyprov, hashedPassword]);
         // Crear el token JWT
         const token = jwt.sign({ id: result.id_bank, role: 'bank' }, 'my_secret', { expiresIn: '1h' });
-    // Respuesta después de la creación exitosa del banco
+    // Respuesta 
     res.status(201).json({
         status: 201,
         message: 'Usuario banco creado correctamente',
@@ -42,7 +38,7 @@ export const registerBank = async (req, res) => {
             id_counyprov
         }
     });
-        }
+        
         
         } catch (error) {
             console.log(error);

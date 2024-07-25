@@ -23,11 +23,11 @@ pool;
 //RUTAS
 //importamos
 import {bankRouter} from './routes/bank.router.js';
-
+import {routerClient} from './routes/client.router.js';
 
 //ponemos en uso
 app.use(bankRouter)
-
+app.use(routerClient)
 
 //FIN RUTAS
 
