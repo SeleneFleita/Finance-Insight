@@ -8,6 +8,6 @@ export const bankRouter = Router()
 //ruta para registrarse 
 bankRouter.post('/api/bank/register', registerBank)
 
-bankRouter.get('/api/bank/login', loginBank)
+bankRouter.post('/api/bank/login', loginBank)
 
 
