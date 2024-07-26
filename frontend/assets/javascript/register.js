@@ -1,26 +1,4 @@
 //desplazar
-let a = document.getElementById("loginBtn");
-let b = document.getElementById("registerBtn");
-let x = document.getElementById("login");
-let y = document.getElementById("register");
-
-function login() {
-    x.style.left = "4px";
-    y.style.right = "-520px";
-    a.className += " white-btn";
-    b.className = "btn";
-    x.style.opacity = 1;
-    y.style.opacity = 0;
-}
-
-function register() {
-    x.style.left = "-510px";
-    y.style.right = "5px";
-    a.className = "btn";
-    b.className += " white-btn";
-    x.style.opacity = 0;
-    y.style.opacity = 1;
-}
 
 console.log("hola mundo");
 
@@ -28,21 +6,44 @@ async function registrarClient(e) {
     e.preventDefault();
     // Valores del input
 const nombre_apellido = document.getElementById("nombreap-cliente").value;
-const fecha_nac = document.getElementById("fechanac-cliente").value.trim();
 const dni = document.getElementById("dni-cliente").value.trim();
 const mail_client = document.getElementById("mail-cliente").value.trim();
 const telefono_client = document.getElementById("telefono-cliente").value.trim();
 const password_client = document.getElementById("contracli-cliente").value;
 const country = document.getElementById("pais-cliente").value;
-const province = document.getElementById("province-cliente").value.trim();
+const province = document.getElementById("province-cliente").value;
+const form = document.getElementsByClassName("submit")
 
-const peticion = await fetch('http://localhost:4000/api/client/register', {
+const urlRegistroClient = "http://localhost:4000/api/client/register"
+
+let ingreso = {
+    nombre_apellido : "",
+    dni : "",
+    mail_client : "",
+    telefono_client : "",
+    password_client: "",
+    country : "",
+    province : ""
+}
+form.addEventListener('submit', async (e) =>{
+    e.preventDefault();
+    ingreso.nombre_apellido = nombre_apellido;
+    ingreso.dni = dni;
+    ingreso.mail_client = mail_client;
+    ingreso.telefono_client = telefono_client;
+    ingreso.password_client = password_client;
+    ingreso.country = country;
+    province.province = province;
+})
+const metodo =  {
     method: 'POST',
-    body: JSON.stringify({nombre_apellido, fecha_nac, dni, mail_client, telefono_client, password_client, country, province}),
     headers: {
         'Content-type': 'application/json'
-    }   
-})
+    },   
+    body: JSON.stringify(ingreso)
+};
+
+const peticion = await fetch(urlRegistroClient, metodo);
 const respuesta = await peticion.json();
 
 if (!peticion.ok) {
@@ -55,17 +56,18 @@ if (!peticion.ok) {
 }
 form.addEventListener('submit', register);
 }
+
+
+
 //validar cliente
 function validarCliente() {
 // Valores del input
 const nypcliente = document.getElementById("nombreap-cliente").value;
-const fechanac = document.getElementById("fechanac-cliente").value.trim();
 const dni = document.getElementById("dni-cliente").value.trim();
 const mail = document.getElementById("mail-cliente").value.trim();
 const con = document.getElementById("contracli-cliente").value;
 const confir = document.getElementById("confconcli-cliente").value;
-const country = document.getElementById("pais-cliente").value;
-const province = document.getElementById("mail-cliente").value.trim();
+
 
 // Errores
 const errnypcliente = document.getElementById("error-nombreap-cliente");
@@ -116,20 +118,6 @@ errmail.classList.add("error-message");
 errmail.textContent = "";
 errmail.classList.remove("error-message");
 }
-// Validar fecha de nacimiento
-const fechaActual = new Date();
-const fechaNacimiento = new Date(fechanac);
-
-if (isNaN(fechaNacimiento.getTime())) {
-errfechanac.textContent = "Ingrese una fecha de nacimiento válida";
-errfechanac.classList.add("error-message");
-} else if (fechaNacimiento >= fechaActual) {
-errfechanac.textContent = "La fecha de nacimiento no puede ser en el futuro";
-errfechanac.classList.add("error-message");
-} else {
-errfechanac.textContent = "";
-errfechanac.classList.remove("error-message");
-}
 
 
 // Validar DNI
@@ -165,7 +153,7 @@ errorform.textContent = "";
 errorform.classList.remove("error-message");
 }
 
-registrarClient()
+
 }
 
 
@@ -191,7 +179,7 @@ const mail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ // Correo electr
 //validaciones
 //validar la longitud de la razon social
 if (razonSocial.length < 4) {
-    errrazonSocial.textContent = "La razon social deben tener al menos 4 caracteres";
+    errrazonSocial.textContent = "Debe tener como minimo 4 caracteres";
     errrazonSocial.classList.add("error-message");
     } else {
     errrazonSocial.textContent = "";
@@ -199,7 +187,7 @@ if (razonSocial.length < 4) {
     }
 // Validar correo electrónico
 if (!mail.test(email)) {
-    erremail.textContent = "Ingrese una dirección de correo válida (por ejemplo, usuario@dominio.com)";
+    erremail.textContent = "Ingrese un correo válido";
     erremail.classList.add("error-message");
     } else {
     erremail.textContent = "";
@@ -207,7 +195,7 @@ if (!mail.test(email)) {
     }
     //validar cuil
     if (isNaN(cuil) || cuil.length !== 11) {
-        errcuil.textContent = "El CUIL debe ser un número de 11 dígitos";
+        errcuil.textContent = "debe contener de 11 dígitos";
         errcuil.classList.add("error-message");
         } else {
         errcuil.textContent = "";
@@ -215,7 +203,7 @@ if (!mail.test(email)) {
         }
     //validar contraseña
     if (contra.length < 6) {
-        errcontra.textContent = "La contraseña debe tener al menos 6 caracteres";
+        errcontra.textContent = "debe contener almenos 6 caracteres";
         errcontra.classList.add("error-message");
         } else{
         errcontra.textContent = "";

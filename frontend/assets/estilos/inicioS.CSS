@@ -13,7 +13,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
-    background-color: rgb(149, 209, 243);
+    background: url(../img/fondologreg.jpg);
 }
 
 
@@ -82,19 +82,20 @@ body{
 .nav-menu-btn{
     display: none;
 }
-.form-box{
+.form-box {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 522px;
-    height: 430px;
+    width: 500px; /* Tamaño ajustado */
+    height: 400px; /* Tamaño ajustado */
     overflow: hidden;
     z-index: 2;
-    /* background-color: blue; */
-    background-color: rgba(255, 255, 255, 0.151) ; 
-    margin-top: 4cm;
-    border-radius: 2%;
+    background-color: rgba(41, 39, 40, 0.473);
+    border-radius: 20px; /* Radio del borde ajustado */
+    box-shadow: 0 4px 8px rgba(148, 147, 147, 0.2); /* Sombra para profundidad */
+    padding: 20px; /* Espaciado interno para evitar que el contenido esté pegado a los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto total del elemento */
 }
 .login-container{
     position: absolute;
