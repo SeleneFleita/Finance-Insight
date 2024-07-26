@@ -127,4 +127,3 @@ CREATE TABLE enrollment (
     FOREIGN KEY (course_id) REFERENCES course(id_curso)
 );
 
-SHOW TABLES;
