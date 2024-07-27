@@ -19,7 +19,7 @@
         </div>
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Cliente</button>
-            <button class="btn" id="registerBtn" onclick="register()">Entindad Bancaria </button>
+            <button class="btn" id="registerBtn" onclick="register()">Entidad Bancaria</button>
         </div>
         
     </nav>
@@ -31,19 +31,19 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                <header>¡Bienvenido!</header>
-                <span>¿No tienes una cuenta? <a href="#" onclick="register()">Registrarme</a></span>
+                <header>¡Bienvenido!, </header>
+                <span>¿No tienes una cuenta? <a href="register.html" onclick="">Registrarme</a></span>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Ingresar Email">
+                <input type="text" class="input-field" id="mail_bank" placeholder="Ingresar Email">
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar Contraseña">
+                <input type="password" class="input-field" id="password_bank" placeholder="Ingresar Contraseña">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Iniciar Sesión">
+                <input type="submit" class="submit" onclick="logBanco(event)" value="Iniciar Sesión">
             </div>
             <div class="two-col">
                 <div class="one">
@@ -51,7 +51,7 @@
                     <label for="login-check"> Remember Me</label> -->
                 </div>
                 <div class="two">
-                    <label><a href="#">¿Olvidaste tu contraseña?</a></label>
+                    <label><a href="#" >¿Olvidaste tu contraseña?</a></label>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
         <div class="register-container" id="register">
             <div class="top">
                 <header>¡Bienvenido!</header>
-                <span>¿No tienes una cuenta? <a href="#" onclick="login()">Registrarme</a></span>
+                <span>¿Ya tienes una cuenta? <a href="#" onclick="login()">Iniciar sesión</a></span>
             </div>
             <!-- <div class="two-forms">
                 <div class="input-box">
@@ -73,15 +73,15 @@
                 </div>
             </div> -->
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Ingresar gmail">
+                <input type="text" class="input-field" placeholder="Ingresar gmail" id="mail_client">
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña">
+                <input type="password" class="input-field" placeholder="Ingresar contraseña" id="password_client">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Iniciar Sesion">
+                <input type="submit" class="submit" value="Registrarme">
             </div>
             <!-- <div class="two-col">
                 <div class="one">
@@ -96,9 +96,7 @@
     </div>
 </div>   
 
-
 <script>
-   
    function myMenuFunction() {
     var i = document.getElementById("navMenu");
 
@@ -108,11 +106,9 @@
         i.className = "nav-menu";
     }
    }
- 
 </script>
 
 <script>
-
     var a = document.getElementById("loginBtn");
     var b = document.getElementById("registerBtn");
     var x = document.getElementById("login");
@@ -135,8 +131,79 @@
         x.style.opacity = 0;
         y.style.opacity = 1;
     }
-
 </script>
 
+<script>
+    async function logBanco(e) {
+        e.preventDefault(); // Previene el comportamiento por defecto del enlace
+
+        const mail_bank = document.getElementById("mail_bank").value;
+        const password = document.getElementById("password_bank").value;
+
+        const urlogbanco = 'http://localhost:4000/api/bank/login';
+
+        const ingreso = {
+            mail_bank: mail_bank,
+            password: password
+        };
+
+        const metodo = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(ingreso)
+        };
+
+        try {
+            const peticion = await fetch(urlogbanco, metodo);
+            const respuesta = await peticion.json();
+            if (!peticion.ok) {
+                alert(respuesta.msg || 'Se produjo un error al iniciar sesión');
+            } else {
+                alert(respuesta.msg || 'Inicio de sesión exitoso');
+                window.location.href = 'banco/banco.html'; // Corrección aquí
+            }
+        } catch (error) {
+            console.log('Error en la solicitud:', error);
+            alert('Error al registrar cliente. Por favor, intente nuevamente.');
+        }
+    }
+    async function logBanco(e) {
+        e.preventDefault(); // Previene el comportamiento por defecto del enlace
+
+        const mail_client= document.getElementById("mail_client").value;
+        const password = document.getElementById("password_client").value;
+
+        const urlogclient = 'http://localhost:4000/api/client/login';
+
+        const ingreso = {
+            mail_client: mail_client,
+            password: password
+        };
+
+        const metodo = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(ingreso)
+        };
+
+        try {
+            const peticion = await fetch(urlogclient, metodo);
+            const respuesta = await peticion.json();
+            if (!peticion.ok) {
+                alert(respuesta.msg || 'Se produjo un error al iniciar sesión');
+            } else {
+                alert(respuesta.msg || 'Inicio de sesión exitoso');
+                window.location.href = 'cliente/pagPrincipal.html'; 
+            }
+        } catch (error) {
+            console.log('Error en la solicitud:', error);
+            alert('Error al registrar cliente. Por favor, intente nuevamente.');
+        }
+    }
+</script>
 </body>
 </html>
