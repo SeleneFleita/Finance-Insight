@@ -7,7 +7,7 @@ import {pool} from '../bd/basedata.js';
 export const registerBank = async (req, res) => {
     const { razon_social, cuit, mail_bank, telefono, password_bank, country, province} = req.body;
     try {
-        
+        console.log(password_bank);
         // Verificar si el banco ya existe en la base de datos
            // Verificar si el CUIT ya está registrado
            const [existeUser] = await pool.query('SELECT * FROM bank WHERE cuit = ?', [cuit]);

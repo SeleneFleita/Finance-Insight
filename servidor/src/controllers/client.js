@@ -4,19 +4,20 @@ import {pool} from '../bd/basedata.js';
 
 export const registerClient = async (req, res) => {
     const { nombreyapellido, dni, mail_client, telefono_client, password_client, country, province} = req.body;
+
     try {
         //validacion
         const [existeUser] = await pool.query('SELECT * FROM client WHERE dni = ?', [dni]);
         if (existeUser === 0) {
             return res.status(400).json({ message: "El DNI que ha ingresado ya está registrado en nuestro sistema" });
         }
-         console.log(existeUser);
+        console.log(existeUser);
         // Verificar si el email ya está registrado
         const [mail_exist] = await pool.query('SELECT mail_client FROM client WHERE mail_client = ?', [mail_client]);
         if (mail_exist.length > 0) {
             return res.status(400).json({ message: "El email que ha ingresado ya está registrado en nuestro sistema" });
         }
-        
+        console.log({ nombreyapellido, dni, mail_client, telefono_client, password_client, country, province});
         //id_counyprov
         const [pc] = await pool.query('SELECT cp.id_counyprov FROM country_province cp JOIN province p ON cp.id_province = p.id_province JOIN country c ON cp.id_country = c.id_country WHERE p.nombre = ? AND c.nombre = ?; ', [province, country])
         const id_counyprov = pc[0].id_counyprov

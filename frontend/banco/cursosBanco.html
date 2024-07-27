@@ -17,6 +17,22 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../assets/estilos/banco.css">
+    <style>
+      .form-container {
+        border: 1px solid #dee2e6;
+        border-radius: 0.375rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        background-color: #fff;
+      }
+      .btn-shadow {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .form-control:focus {
+        box-shadow: none;
+        border-color: #004085;
+      }
+    </style>
   </head>
 
 
@@ -75,7 +91,69 @@
         </div>
       </nav>
 </header>
- 
+<main class="container my-5">
+  <h1 class="text-center mb-4">Crear Nuevo Curso</h1>
+  <div class="form-container mx-auto">
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="courseTitle" class="form-label">Título del Curso</label>
+            <input type="text" class="form-control" id="courseTitle" placeholder="Título del curso" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="courseCategory" class="form-label">Categoría</label>
+            <select class="form-select" id="courseCategory" required>
+              <option value="" disabled selected>Selecciona una categoría</option>
+              <option value="finanzas">Finanzas</option>
+              <option value="emprendimiento">Emprendimiento</option>
+              <option value="inversiones">Inversiones</option>
+              <!-- Agrega más categorías según sea necesario -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="courseDescription" class="form-label">Descripción</label>
+        <textarea class="form-control" id="courseDescription" rows="4" placeholder="Descripción del curso" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="courseDuration" class="form-label">Duración (en horas)</label>
+        <input type="number" class="form-control" id="courseDuration" placeholder="Duración del curso" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-shadow d-block mx-auto">Crear Curso</button>
+    </form>
+  </div>
+
+  <!-- Cursos Disponibles (Opcional) -->
+  <h2 class="mt-5">Cursos Disponibles</h2>
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Duración</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Curso de Finanzas Básicas</td>
+        <td>Finanzas</td>
+        <td>Aprende los fundamentos de las finanzas personales.</td>
+        <td>20</td>
+        <td>
+          <a href="#" class="btn btn-secondary btn-sm">Editar</a>
+          <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+        </td>
+      </tr>
+      <!-- Agrega más filas según los cursos disponibles -->
+    </tbody>
+  </table>
+</main>
   <footer class="footer">
 
     <div class=" py-4 py-md-5 py-xl-8 border-top ">
