@@ -30,7 +30,7 @@ async function registrarClient(e) {
     // Configuración del método de solicitud
     const metodo = {
         method: 'POST',
-        Headers : {
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(ingreso)
@@ -64,7 +64,7 @@ const  password_bank = document.getElementById("pass-banco").value;
 const telefono = document.getElementById("telefono-banco").value.trim();
 const country = document.getElementById('pais').value;
 const province = document.getElementById('prov').value;
-console.log(password_bank);
+
 const urlRegBanco = 'http://localhost:4000/api/bank/register'
 
 let ingreso = {
@@ -76,7 +76,7 @@ let ingreso = {
     country: country,
     province : province
 }
-
+console.log(ingreso);
 const metodo = {
     method : 'POST',
     headers :{
@@ -190,13 +190,14 @@ errcon.classList.remove("error-message");
 }
 //todos los campos deben estar completos
 if (nypcliente.trim() === "" || dni.trim() === "" || mail.trim() === "" || con.trim() === "" || confir.trim() === "") {
-errorform.textContent = "Rellene todos los campos del formulario";
-errorform.classList.add("error-message");
+    errorform.classList.add("error-message");
+    return errorform.textContent = "Rellene todos los campos del formulario";
 } else {
 errorform.textContent = "";
 errorform.classList.remove("error-message");
-}
 registrarClient()
+
+}
 
 }
 
@@ -209,7 +210,8 @@ const email = document.getElementById("mail-banco").value;
 const cuil = document.getElementById("cuil-banco").value;
 const contra = document.getElementById("pass-banco").value;
 const confir = document.getElementById("confirm-pass-banco").value;
-
+const count = document.getElementById('pais').value;
+const prov = document.getElementById('prov').value;
 //mensaje de error
 const errrazonSocial = document.getElementById("error-razon-social");
 const erremail = document.getElementById("error-email-banco");
@@ -263,13 +265,14 @@ if (!mail.test(email)) {
         }
 
         //todos los campos deben estar completos
-    if (razonSocial === "" || email === "" || cuil === "" ||  contra === "" || confir === "") {
+    if (razonSocial === "" || email === "" || cuil === "" ||  contra === "" || confir === "" || count === "" || prov === "") {
     errform.textContent = "Rellene todos los campos del formulario";
     errform.classList.add("error-message");
     } else {
     errform.textContent = "";
     errform.classList.remove("error-message");
+    registrarBanco()
     }
 
-    registrarBanco()
+    
 }
