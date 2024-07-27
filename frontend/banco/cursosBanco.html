@@ -75,97 +75,7 @@
         </div>
       </nav>
 </header>
-<div class="container">
-    <main class="main-content">
-        
-        <div class="profile-card">
-            <div class="profile-content">
-                <div class="personal-info">
-                    <h2>Información Personal</h2>
-                    <img src="../assets/img/5987424.png" alt="Foto de perfil" class="avatar">
-                    <div class="info-item"><strong>Razon social:</strong> Banco Formosa</div>
-                    <div class="info-item"><strong>Email:</strong> bancoformosa@gmail.com</div>
-                        
-                </div>
-                <div class="courses">
-                    <h6><b>Operaciones personales</b></h6>
-                    <ul> 
-                        <li><a href="#" id="cambioClave">Cambio de clave</a></li>
-                        <li><a href="#" id="verDatos">Mis datos</a></li>
-                        <li><a href="#" id="verCursos">Mis cursos</a></li> 
-                        <li><a href="#" id="editarInfo">Editar información personal</a></li>
-                    </ul>
-                    <h6><b>Recursos</b></h6>
-                    <ul>
-                        <li><a href="#">Crear curso</a></li>
-                        <li><a href="#">Eliminar curso</a></li>
-                        <li><a href="/politicas-privacidad.html">Políticas de privacidad</a></li>
-                        <li><a href="/ayuda.html">Ayuda</a></li>
-                    </ul>
-                    <button class="btn" id="logoutButton">Cerrar Sesión</button>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-</div>
-
-<!-- Modal para mostrar los datos personales -->
-<div id="modalDatos" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Mis Datos Personales</h2>
-        <p><strong>Razón Social:</strong> Banco Formosa</p>
-        <p><strong>CUIT:</strong> 30-12345678-9</p>
-        <p><strong>Email:</strong> bancoformosa@gmail.com</p>
-        <p><strong>Telefono:</strong> 1123568793</p>
-    </div>
-</div>
-<!-- Modal para cambio de clave-->
-<div id="modalCambioClave" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Cambio de Contraseña</h2>
-        <form>
-            <label for="currentPassword">Contraseña Actual:</label>
-            <input type="password" id="currentPassword" name="currentPassword" required><br><br>
-            
-            <label for="newPassword">Nueva Contraseña:</label>
-            <input type="password" id="newPassword" name="newPassword" required><br><br>
-            
-            <label for="confirmPassword">Confirmar Nueva Contraseña:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
-            
-            <button type="submit" class="btn">Cambiar Contraseña</button>
-        </form>
-        
-    </div>
-
-</div>
-
-<!-- Mostrar cursos-->
-<div id="modalListadoCurso" class="modal">
-  <div class="modal-content">
-      <span class="close-cursos">&times;</span>
-      <h2>CURSOS</h2>
-     
-  </div>
-</div>
-<!-- Modal editar informacion personal-->
-<div id="modalEditarCurso" class="modal">
-  <div class="modal-content">
-      <span class="close-editarinfoP">&times;</span>
-      <h2>EDITAR INFO PERSONAL</h2>
-     
-  </div>
-</div> 
-<!-- cerrar sesion-->
-<div id="confirmationDialog" class="dialog hidden">
-  <p>¿Estás seguro?</p>
-  <button id="confirmYes">Sí</button>
-  <button id="confirmNo">No</button>
-</div>
-
+ 
   <footer class="footer">
 
     <div class=" py-4 py-md-5 py-xl-8 border-top ">
@@ -228,7 +138,8 @@
       </div>
 
 </footer>
-<script src="../assets/javascript/banco.js"></script>
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

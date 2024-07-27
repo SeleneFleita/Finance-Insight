@@ -42,3 +42,61 @@ window.onclick = function(event) {
         modalCambioClave.style.display = "none";
     }
 }
+//ver cursos
+let linkverCursos = document.getElementById("verCursos");
+let modalCurso = document.getElementById("modalListadoCurso")
+var spanCerrar = document.getElementsByClassName("close-cursos")[0];
+//aparecer al presionar el link
+linkverCursos.onclick = function() {
+    modalCurso.style.display = "block"
+}
+//cerrar
+spanCerrar.onclick = function(){
+    modalCurso.style.display = "none"
+}
+//cerrar si presiona afuera
+window.onclick = function(event) {
+    if (event.target == modalCurso) {
+        modalCurso.style.display = "none"
+    }
+}
+
+//editar informacion personal
+let linkeditarInfoP = document.getElementById("editarInfo");
+let modalEditarinfo = document.getElementById("modalListadoCurso")
+var spanCerrarEI = document.getElementsByClassName("close-cursos")[0];
+//aparecer al presionar el link
+linkeditarInfoP.onclick = function() {
+    modalEditarinfo.style.display = "block"
+}
+//cerrar
+spanCerrarEI.onclick = function(){
+    modalEditarinfo.style.display = "none"
+}
+//cerrar si presiona afuera
+window.onclick = function(event) {
+    if (event.target == modalCurso) {
+        modalEditarinfo.style.display = "none"
+    }
+}
+
+//cerrar sesion
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logoutButton');
+    const confirmationDialog = document.getElementById('confirmationDialog');
+    const confirmYes = document.getElementById('confirmYes');
+    const confirmNo = document.getElementById('confirmNo');
+
+    logoutButton.addEventListener('click', () => {
+        confirmationDialog.classList.remove('hidden');
+    });
+
+    confirmYes.addEventListener('click', () => {
+        // Redirigir al login
+        window.location.href = '../reg-log/inicioSesion.html';
+    });
+
+    confirmNo.addEventListener('click', () => {
+        confirmationDialog.classList.add('hidden');
+    });
+});

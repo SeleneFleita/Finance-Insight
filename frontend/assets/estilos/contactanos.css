@@ -58,23 +58,25 @@ border:0;
     
   }
   
-body{
-  background-color:  #f8f8f8;
-}
-  .contact-container{
+  body {
+    background-color: #f8f8f8;
+  }
+  
+
+  
+  .contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  
+    height: 100vh; /* Ajusta para centrar verticalmente en toda la vista */
   }
+  
   .right-col {
     background: var(--bg-color);
-    max-width: 600px; /* Ancho máximo del formulario */
+    max-width: 800px; /* Aumentar el ancho máximo del formulario */
     width: 100%;
     padding: 5rem 3.5rem;
     background: none;
-    
   }
   
   h1, label, button, .description {
@@ -84,14 +86,14 @@ body{
   }
   
   h1 {
-    color:var(--h1-color);
+    color: var(--h1-color);
     text-transform: uppercase;
-   
     font-size: 2.8rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
   }
-  h6{
+  
+  h6 {
     display: none;
   }
   
@@ -99,7 +101,7 @@ body{
     color: black;
     font-size: 0.9rem;
     letter-spacing: 0.01rem;
-    width: 40vw;
+    width: 100%; /* Ajustar al 100% del ancho del formulario */
     margin: 0.25rem 0;
   }
   
@@ -110,65 +112,49 @@ body{
   }
   
   form {
+    
     width: 100%;
-    max-width: 400px;
+    max-width: 600px; /* Aumentar el ancho máximo del formulario */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; 
     position: relative;
     margin-top: 2rem;
-    padding: 1rem 0;
-    
-  }
-  
-  input, textarea, label {
-    width: 40vw;
-    display: block;
-    color: #010712;
-  }
-  
-  p, placeholder, input, textarea {
-    font-family: 'Helvetica Neue', sans-serif;
-  }
-  
-  input::placeholder, textarea::placeholder {
-    color: black;
+    padding: 2rem; /* Aumentar el padding para más espacio interno */
+    border: 1px solid var(--secondary-color); /* Agregar borde */
+    border-radius: 5px; /* Esquinas redondeadas opcional */
+    background: var(--bg-color); /* Color de fondo opcional */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Agregar sombra al formulario */
   }
   
   input, textarea {
-    color: black;
+    width: 100%; /* Ajustar al 100% del ancho del formulario */
+    display: block;
+    color: #010712;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 500;
     background: var(--bg-color);
-    padding: 0.5rem 0;
+    padding: 0.75rem; /* Aumentar el padding para más espacio interno */
     margin-bottom: 1rem;
     outline: none;
     border: 1px solid var(--secondary-color);
     border-radius: 2px;
     background-color: var(--bg-color);
     color: var(--primary-color);
-    outline: none;
     transition: border-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(66, 18, 18, 0.829); /* Agregar sombra */
+    /* Eliminar sombra aquí */
   }
+  
   textarea {
     resize: none;
   }
   
-  #contact-form button {
-    text-transform: uppercase;
-    font-weight: 300;
-    background: var(--button-color);
-    color: var(--bg-color);
-    width: 13rem;
-    height: 2.25rem;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    
-    
-} 
-  button {
+  input::placeholder, textarea::placeholder {
+    color: black;
+  }
+  
+  #contact-form button, button {
     text-transform: uppercase;
     font-weight: 300;
     background: var(--button-color);
@@ -179,9 +165,9 @@ body{
     border-radius: 2px;
     outline: none;
     cursor: pointer;
+    
   }
   
-
 
   footer {
     background-color: #92b6f5;

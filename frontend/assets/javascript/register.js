@@ -3,61 +3,106 @@
 console.log("hola mundo");
 
 async function registrarClient(e) {
-    e.preventDefault();
-    // Valores del input
-const nombre_apellido = document.getElementById("nombreap-cliente").value;
-const dni = document.getElementById("dni-cliente").value.trim();
-const mail_client = document.getElementById("mail-cliente").value.trim();
-const telefono_client = document.getElementById("telefono-cliente").value.trim();
-const password_client = document.getElementById("contracli-cliente").value;
-const country = document.getElementById("pais-cliente").value;
-const province = document.getElementById("province-cliente").value;
-const form = document.getElementsByClassName("submit")
 
-const urlRegistroClient = "http://localhost:4000/api/client/register"
+    // Obtener valores del input
+    const nombreyapellido = document.getElementById("nombreap-cliente").value;
+    const dni = document.getElementById("dni-cliente").value.trim();
+    const mail_client = document.getElementById("mail-cliente").value.trim();
+    const telefono_client = document.getElementById("telefono-cliente").value.trim();
+    const password_client = document.getElementById("contracli-cliente").value;
+    const country = document.getElementById('pais').value;
+    const province = document.getElementById('provincia').value;
+
+    // URL para registrar el cliente
+    const urlRegistroClient = 'http://localhost:4000/api/client/register';
+
+    // Crear objeto con los datos del cliente
+    let ingreso = {
+        nombreyapellido: nombreyapellido,
+        dni: dni,
+        mail_client: mail_client,
+        telefono_client: telefono_client,
+        password_client: password_client,
+        country: country,
+        province: province
+    };
+
+    // Configuración del método de solicitud
+    const metodo = {
+        method: 'POST',
+        Headers : {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(ingreso)
+    };
+
+    try {
+        // Enviar la solicitud
+        const peticion = await fetch(urlRegistroClient, metodo);
+        const respuesta = await peticion.json();
+
+        if (!peticion.ok) {
+            // Si la solicitud falla, mostrar mensaje de error
+            alert(respuesta.msg || 'Error al registrar cliente');
+        } else {
+            // Si la solicitud es exitosa, mostrar mensaje de éxito y redirigir
+            alert(respuesta.msg || 'Cliente registrado exitosamente');
+            
+        }
+    } catch (error) {
+        // Manejo de errores de red
+        console.log('Error en la solicitud:', error);
+        alert('Error al registrar cliente. Por favor, intente nuevamente.');
+    }
+}
+
+async function registrarBanco (e) {
+const razon_social = document.getElementById("usu-banco").value;
+const mail_bank = document.getElementById("mail-banco").value;
+const cuit = document.getElementById("cuil-banco").value;
+const  password_bank = document.getElementById("pass-banco").value;
+const telefono = document.getElementById("telefono-banco").value.trim();
+const country = document.getElementById('pais').value;
+const province = document.getElementById('prov').value;
+console.log(password_bank);
+const urlRegBanco = 'http://localhost:4000/api/bank/register'
 
 let ingreso = {
-    nombre_apellido : "",
-    dni : "",
-    mail_client : "",
-    telefono_client : "",
-    password_client: "",
-    country : "",
-    province : ""
+    razon_social : razon_social,
+    cuit : cuit,
+    mail_bank: mail_bank,
+    telefono : telefono,
+    password_bank : password_bank,
+    country: country,
+    province : province
 }
-form.addEventListener('submit', async (e) =>{
-    e.preventDefault();
-    ingreso.nombre_apellido = nombre_apellido;
-    ingreso.dni = dni;
-    ingreso.mail_client = mail_client;
-    ingreso.telefono_client = telefono_client;
-    ingreso.password_client = password_client;
-    ingreso.country = country;
-    province.province = province;
-})
-const metodo =  {
-    method: 'POST',
-    headers: {
-        'Content-type': 'application/json'
-    },   
+
+const metodo = {
+    method : 'POST',
+    headers :{
+        'Content-Type': 'application/json'
+    },
     body: JSON.stringify(ingreso)
-};
-
-const peticion = await fetch(urlRegistroClient, metodo);
-const respuesta = await peticion.json();
-
-if (!peticion.ok) {
-    //si falla
-    alert(respuesta.msg)
-} else {
-    alert(respuesta.msg)
-    //redirigir
-    window.location.href = 'frontend/reg-log/inicioSesion.html'
 }
-form.addEventListener('submit', register);
+try {
+    // Enviar la solicitud
+    const peticion = await fetch(urlRegBanco, metodo);
+    const respuesta = await peticion.json();
+
+    if (!peticion.ok) {
+        // Si la solicitud falla, mostrar mensaje de error
+        alert(respuesta.msg || 'Error al registrar cliente');
+    } else {
+        // Si la solicitud es exitosa, mostrar mensaje de éxito y redirigir
+        alert(respuesta.msg || 'Cliente registrado exitosamente');
+        
+    }
+} catch (error) {
+    // Manejo de errores de red
+    console.log('Error en la solicitud:', error);
+    alert('Error al registrar cliente. Por favor, intente nuevamente.');
 }
-
-
+}
 
 //validar cliente
 function validarCliente() {
@@ -71,7 +116,6 @@ const confir = document.getElementById("confconcli-cliente").value;
 
 // Errores
 const errnypcliente = document.getElementById("error-nombreap-cliente");
-const errfechanac = document.getElementById("error-fechanac-cliente");
 const errdni = document.getElementById("error-dni-cliente");
 const errmail = document.getElementById("error-mail-cliente");
 const errcon = document.getElementById("error-contracli-cliente");
@@ -145,14 +189,14 @@ errcon.textContent = "";
 errcon.classList.remove("error-message");
 }
 //todos los campos deben estar completos
-if (nypcliente.trim() === "" || fechanac.trim() === "" || dni.trim() === "" || mail.trim() === "" || con.trim() === "" || confir.trim() === "") {
+if (nypcliente.trim() === "" || dni.trim() === "" || mail.trim() === "" || con.trim() === "" || confir.trim() === "") {
 errorform.textContent = "Rellene todos los campos del formulario";
 errorform.classList.add("error-message");
 } else {
 errorform.textContent = "";
 errorform.classList.remove("error-message");
 }
-
+registrarClient()
 
 }
 
@@ -226,4 +270,6 @@ if (!mail.test(email)) {
     errform.textContent = "";
     errform.classList.remove("error-message");
     }
+
+    registrarBanco()
 }

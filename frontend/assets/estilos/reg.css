@@ -88,7 +88,7 @@
     height: 400px; /* Tamaño ajustado */
     overflow: hidden;
     z-index: 2;
-    background-color: rgba(41, 39, 40, 0.473);
+    background-color: rgba(41, 39, 40, 0.849);
     border-radius: 20px; /* Radio del borde ajustado */
     box-shadow: 0 4px 8px rgba(148, 147, 147, 0.2); /* Sombra para profundidad */
     padding: 20px; /* Espaciado interno para evitar que el contenido esté pegado a los bordes */
@@ -186,7 +186,7 @@ header {
     font-size: 14px; 
     outline: none;
     appearance: none; 
-    transition: .2s ease; 
+    
 }
 
 
