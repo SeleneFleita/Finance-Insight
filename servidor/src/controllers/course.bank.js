@@ -1,7 +1,7 @@
 import {pool} from '../bd/basedata.js';
 
 //crear curso
-export const crearCourseBank = async (req, res) => {
+   export const crearCourseBank = async (req, res) => {
     const { nombre, categoria, duracion, descripcion } = req.body;
     const id_bank = req.id_bank; // Extraído del token
     console.log("ID del banco:", id_bank);
@@ -36,3 +36,25 @@ export const crearCourseBank = async (req, res) => {
     }
 };
     
+export const listarCursos = async (req, res) => {
+    const id = req.id_bank;
+    try {
+        console.log(id);
+        // Buscamos los cursos
+        const [cursos] = await pool.query('SELECT * FROM course_bank WHERE id_bank = ?', [id]);
+        console.log(cursos);
+        if (cursos.length === 0) {
+            return res.status(404).json({
+                message: 'Este usuario aún no ha ingresado cursos en nuestro sistema.'
+            });
+        }
+        // Responder con los cursos encontrados
+        return res.status(200).json(cursos);
+        
+    } catch (error) {
+        console.error("Error al obtener los cursos:", error);
+        return res.status(500).json({
+            message: 'Error interno del servidor.'
+        });
+    }
+}

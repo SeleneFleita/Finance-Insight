@@ -10,6 +10,7 @@ export const validarToken = (req, res, next) => {
     }
 
     const token = authHeader.split(' ')[1];
+
     console.log("Token extraído: ", token);
 
     // Verificar y decodificar el token
