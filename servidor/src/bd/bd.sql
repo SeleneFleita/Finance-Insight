@@ -123,7 +123,7 @@ CREATE TABLE enrollment (
     estado ENUM ('activo', 'inactivo', 'completado') DEFAULT 'activo',
     fecha_inicio DATETIME,
     FOREIGN KEY (client_id) REFERENCES client(id_client),
-    FOREIGN KEY (course_bank_id) REFERENCES course_bank(id_curso),
+    FOREIGN KEY (course_bank_id) REFERENCES course_bank(id_curso_b),
     FOREIGN KEY (course_id) REFERENCES course(id_curso)
 );
 

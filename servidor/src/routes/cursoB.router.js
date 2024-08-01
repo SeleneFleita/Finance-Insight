@@ -5,4 +5,4 @@ import {crearCourseBank} from '../controllers/course.bank.js';
 export const courseB = Router()
 
 //crear curso 
-courseB.post('/api/curso/crear', crearCourseBank)
+courseB.post('/api/banco/curso/crear',validarToken, crearCourseBank)
