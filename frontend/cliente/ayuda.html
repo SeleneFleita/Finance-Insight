@@ -1,366 +1,228 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <title>ayuda</title>
+<head>
+    <title>Ayuda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-  <!-- Font Awesome para iconos -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <link rel="icon" href="../assets/img/justlogo.png">
-  <link rel="stylesheet" href="../assets/estilos/ayuda.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../assets/img/Finance-transformed2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <style>
-      
-:root {
-    --primary-color: #010712;
-    --secondary-color: #818386;
-    --bg-color: #FCFDFD;
-    --button-color: #3B3636;
-    --h1-color: #3F444C;
-  }
-  
-  [data-theme="dark"] {
-    --primary-color: #FCFDFD;
-    --secondary-color: #818386;
-    --bg-color: #010712;
-    --button-color: #818386;
-    --h1-color: #FCFDFD;
-  }
-
-  .navbar{
-    min-height: 50px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;}
-    nav{
-        background-color: #92b6f5;
-    }
-   .navbar-title{
-    font-family: naturasans;
-    font-weight: 500px;
-    font-size: 30px;
-    height: 100px;
-    margin-right: 600px;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    
-    }
-    
-.logo {
-  height: 90px;
-  width: 90px;
-}
-button{
-border-radius:10px;
-outline:none;
-outline-color: transparent;
-border:0;
-}
-.navbar-toggler{
-    border-radius:10px;
-outline:none;
-border:0;
-} 
-footer {
-  background-color: #92b6f5;
-
-}
-  
-  main{
-   display: flex;
-   justify-content: center;
-    flex-direction: column ;
-  }
-  .hr {
-    height: 3px;
-      background-color: #92b6f5;
-  }
-
-  section{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-
-
-  }
-
-  
-    </style>
-  </head>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/estilos/ayuda.css">
+    <link rel="stylesheet" href="../assets/estilos/banco-help.css">
+</head>
 
 <body class="body">
-  <header class="d-flex ">
+<header class="d-flex">
     <nav class="navbar col-12">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <img class="logo" src="assets/img/Finance-transformed2.png" /></a>
-          </button>
-          <span class="navbar-title divider hidden-xs" href="pagPrincipal.html"></span>
-       
-    </div>
-          <div class="offcanvas offcanvas-start" style="background-image: url(assets/img/backgr.png) ;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <img class="logo" src="../assets/img/Finance-transformed2.png" alt="Logo" />
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-start" style="background-image: url('../assets/img/backgr.png');" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FinanceInsight</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">FinanceInsight</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="miAgenda.html">MiAgenda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="miAgenda.html">Gestion monetaria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Emprendedores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Banco</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="categorias.html">Cursos</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Comentarios
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-primary">
-                    <li><a class="dropdown-item" href="sobreNostros.html">Sobre nosotros</a></li>
-                    <li><a class="dropdown-item" href="contactanos.html">Centro de quejas</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
                     </li>
-                    <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
-                  </ul>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="op-cursos.html">MiAgenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="miAgenda.html">Gestion monetaria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Emprendedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Banco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias.html">Cursos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comentarios</a>
+                        <ul class="dropdown-menu dropdown-menu-primary">
+                            <li><a class="dropdown-item" href="sobreNosotros.html">Sobre nosotros</a></li>
+                            <li><a class="dropdown-item" href="contactanos.html">Centro de quejas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ayuda.html">Ayuda</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 </header>
 
-<div id="hero">
-  <div class="container">
-      <div class="row">
-          <div class="six columns">
-              <div class="contenido-hero">
-                  <h2>Centro de Ayuda</h2>
-                  <p>¿En que te podemos ayudar?</p>
-                  <form action="#" id="busqueda" method="post" class="formulario">
-                      <input class="u-full-width" type="text" placeholder="" id="buscador">
-                      <input type="submit" id="submit-buscador" class="submit-buscador">
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
+<main>
+    <div class="hel">
+        <section id="help">
+            <h1>Centro de Ayuda</h1>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Buscar ayuda...">
+                <button class="search-button" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+        <section id="faq-categories">
+          <h2>Preguntas Frecuentes</h2>
+        </div>
+            <div class="pre-frec">
+                <div class="category">
+                    <h4>Cuenta</h4>
+                    <ul>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q1">¿Cómo actualizo mi información?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q2">¿Cómo recupero mi contraseña?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q3">¿Cómo edito mi contraseña?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q4">¿Cómo cerrar sesión?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q5">¿Cómo puedo ver mi información actual?</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h4>Cursos</h4>
+                    <ul>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q6">¿Cómo me inscribo a un curso?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q7">¿Cómo cambiar el estado 'cursando' a 'finalizado'?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q8">¿Cómo veo mis historial de cursos?</a></li>
+                        <li><a href="#" class="modal-trigger" data-target="#modal-q9">¿Cómo puedo salir de un curso?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-support">
+            <h2>Contacto</h2>
+            <p>Si necesitas más ayuda, contáctanos a través de:</p>
+            <ul>
+                <li><a href="mailto:support@example.com">Correo Electrónico</a></li>
+                <li><a href="#live-chat">Chat en Vivo</a></li>
+                <li><a href="contactanos.html">Formulario de Contacto</a></li>
+            </ul>
+        </section>
+
+
+   <!-- Modales -->
+  <div id="modal-q1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo actualizo mi información?</h2>
+        <p>Para actualizar tu información, sigue estos pasos...</p>
+    </div>
 </div>
-  <div class="contenedor">
-    <div class="text-center" style="background-color: #b9d3e0;">
-      <img src="assets/img/educacion.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="container mt-5">
-      <h2 class="text-center mb-4">Consultas</h2>
-  
-      <div id="accordion">
-        <!-- Consulta 1 -->
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                ¿Cómo puedo acceder a los cursos?
-              </button>
-            </h5>
-          </div>
-  
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore vero veritatis possimus dolores voluptatum enim veniam! Maiores quis consequatur nemo reprehenderit, magni, fugit, repellat iusto nulla aspernatur quas placeat aperiam.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 2 -->
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                ¿Cómo puedo acceder a los cursos que proporciona el banco?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 3 -->
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                ¿Cómo puedo utilizar mi agenda?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 4 -->
-        <div class="card">
-          <div class="card-header" id="headingFour">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                ¿Cómo actualizar mi información personal?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 5 -->
-        <div class="card">
-          <div class="card-header" id="headingFive">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                ¿Cómo puedo recuperar mi cuenta?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 6 -->
-        <div class="card">
-          <div class="card-header" id="headingSix">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                ¿Cómo utilizar el generador de gráficos?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eum? Beatae voluptate vero omnis nisi quisquam cum repellat, aut facere alias voluptates quis. In, ipsa aperiam! Nulla sit aspernatur a?</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Consulta 7 -->
-        <div class="card">
-          <div class="card-header" id="headingSeven">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                ¿Cómo puedo acceder a mi historial de cursos?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur similique enim repudiandae perferendis earum eaque distinctio deleniti repellendus architecto, accusamus quos tempora magni ipsam amet odit placeat! Dolores, numquam neque.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 
-  <footer class="footer">
+<div id="modal-q2" class="modal">
+    <div class="modal-content">
+        <span class="close-rec">&times;</span>
+        <h2>¿Cómo recupero mi contraseña?</h2>
+        <p>Si olvidaste tu contraseña, puedes recuperarla siguiendo estos pasos...</p>
+    </div>
+</div>
 
-    <div class=" py-4 py-md-5 py-xl-8 border-top ">
-        <div class="container overflow-hidden">
+<div id="modal-q3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo edito mi contraseña?</h2>
+        <p>Para editar tu contraseña, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo cerrar sesión?</h2>
+        <p>Para cerrar sesión, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q5" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo puedo ver mi información actual?</h2>
+        <p>Para ver tu información actual, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q6" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo me inscribo a un curso?</h2>
+        <p>Para crear un curso, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q7" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo cambio el estado de 'cursando' a 'finalizado'?</h2>
+        <p>Para eliminar un curso, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q8" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo veo el historial de cursos?</h2>
+        <p>Para editar o actualizar la información de un curso, sigue estos pasos...</p>
+    </div>
+</div>
+
+<div id="modal-q9" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo salir de un curso?</h2>
+        <p>Para ver tus cursos, sigue estos pasos...</p>
+    </div>
+</div>
+
+</div>
+</main>
+<footer class="footer">
+  <div class="py-4 py-md-5 py-xl-8 border-top">
+      <div class="container overflow-hidden">
           <div class="row gy-4 gy-md-0 align-items-sm-center">
-            <div class="col-xs-12 col-sm-6 col-md-4 order-0 order-md-0">
-              <div class="footer-logo-wrapper text-center text-sm-start">
-                <a href="#!">
-                  <img src="./assets/img/Finance-transformed2.png" alt="BootstrapBrain Logo" width="125" height="107">
-                </a>
+              <div class="col-xs-12 col-sm-6 col-md-4 order-0 order-md-0">
+                  <div class="footer-logo-wrapper text-center text-sm-start">
+                      <a href="#!">
+                          <img src="../assets/img/Finance-transformed2.png" alt="Logo" width="125" height="107">
+                      </a>
+                  </div>
               </div>
-            </div>
-    
-            <div class="col-xs-12 col-md-4 order-2 order-md-1">
-              <div class="footer-copyright-wrapper text-center">
-                &copy; 2024. All Rights Reserved.
+              <div class="col-xs-12 col-md-4 order-2 order-md-1">
+                  <div class="footer-copyright-wrapper text-center">
+                      &copy; 2024. All Rights Reserved.
+                  </div>
+                  <div class="credits text-secondary text-center mt-2 fs-8">
+                      Built by <a href="./pagPrincipal.html" class="link-secondary text-decoration-none">Finance Insight</a> with <span class="text-primary">&#9829;</span>
+                  </div>
               </div>
-              <div class="credits text-secondary text-center mt-2 fs-8">
-                Built by <a href="./pagPrincipal.html" class="link-secondary text-decoration-none">Finance Insight</a> with <span class="text-primary">&#9829;</span>
+              <div class="col-xs-12 col-md-4 order-1 order-md-2">
+                  <div class="footer-nav-wrapper text-center text-md-end">
+                      <ul class="nav justify-content-center justify-content-md-end mb-2 mb-md-0">
+                          <li class="nav-item"><a class="nav-link px-2" href="sobreNostros.html">Sobre Nosotros</a></li>
+                          <li class="nav-item"><a class="nav-link px-2" href="contactanos.html">Contáctanos</a></li>
+                          <li class="nav-item"><a class="nav-link px-2" href="#">Privacidad</a></li>
+                      </ul>
+                  </div>
               </div>
-            </div>
-    
-            <div class="col-xs-12 col-sm-6 col-md-4 order-1 order-md-2">
-              <div class="social-media-wrapper">
-                <ul class="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-sm-end">
-                  <li class="me-3">
-                    <a href="https://www.facebook.com/?locale=es_LA" class="link-dark link-opacity-75-hover">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="me-3">
-                    <a href="mailto:insightfinance485@gmail.com" class="link-dark link-opacity-75-hover">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                        <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                        <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="me-3">
-                    <a href="https://wa.me/3704675473/?text=¡Necesito educacion financiera!" class="link-dark link-opacity-75-hover">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="https://www.google.com/maps/dir/Banco+Formosa,+P3600+Formosa//@-26.1563049,-58.2686996,12z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x945ca581290074ad:0x3d6b919e93689c2b!2m2!1d-58.1862615!2d-26.1564709!1m0?entry=ttu" class="link-dark link-opacity-75-hover">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-
+  </div>
 </footer>
-    <script
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTgF8ukwpxz7v/7KKuL5IWBR9OxM7xAoG5htSTBlbC1a8s8Q2cZw3qgHb3zKfP" crossorigin="anonymous"></script>
+
+<!-- JavaScript for Modals -->
+<script src="../assets/javascript/banco-help.js"></script>
+<script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
@@ -374,5 +236,6 @@ footer {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+
+</body>
 </html>
