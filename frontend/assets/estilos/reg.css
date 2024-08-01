@@ -84,15 +84,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px; /* Tamaño ajustado */
-    height: 400px; /* Tamaño ajustado */
+    width: 500px; 
+    height: 400px; 
     overflow: hidden;
     z-index: 2;
     background-color: rgba(41, 39, 40, 0.849);
-    border-radius: 20px; /* Radio del borde ajustado */
-    box-shadow: 0 4px 8px rgba(148, 147, 147, 0.2); /* Sombra para profundidad */
-    padding: 20px; /* Espaciado interno para evitar que el contenido esté pegado a los bordes */
-    box-sizing: border-box; /* Incluye el padding en el ancho y alto total del elemento */
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(148, 147, 147, 0.2); 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .login-container, .register-container {
@@ -104,12 +104,12 @@
 }
 
 .register-container {
-    right: -480px; /* Ajustado para que se alinee con el tamaño del contenedor */
+    right: -480px; 
 }
 
 .top h3 {
     color: #fff;
-    font-size: 16px; /* Tamaño de fuente ligeramente mayor para mejor legibilidad */
+    font-size: 16px;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -132,14 +132,14 @@ header {
 }
 
 .input-field {
-    font-size: 14px; /* Tamaño de fuente ajustado */
+    font-size: 14px;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
-    height: 40px; /* Ajustado */
-    width: 100%; /* Ajustado para ocupar el ancho disponible */
-    padding: 0 10px; /* Ajustado para mantener el espacio interno */
+    height: 40px; 
+    width: 100%; 
+    padding: 0 10px; 
     border: none;
-    border-radius: 25px; /* Ajustado */
+    border-radius: 25px; 
     outline: none;
     transition: .2s ease;
 }
@@ -152,27 +152,28 @@ header {
 
 .input-box {
     position: relative;
-    margin-bottom: 20px; /* Ajustado para un poco más de espacio entre inputs */
-    width: 100%; /* Asegura que el contenedor del input ocupe el 100% del ancho disponible */
+    margin-bottom: 20px; 
+    width: 100%;
 }
 
 .input-box i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 15px; /* Ajustado para un mejor espaciado con el texto */
+    left: 15px; 
     color: #fff;
 }
 .input-box label {
     display: block;
     color: #fff;
-    font-size: 14px; /* Tamaño de fuente similar al de los campos de entrada */
-    margin-bottom: 5px; /* Espacio entre la etiqueta y el select */
-}
+    font-size: 14px; 
+    margin-bottom: 5px; 
+    }
+    
 .custom-select {
     position: relative;
-    width: 100%; /* Asegura que el select ocupe todo el ancho disponible */
-    height: 40px; /* Ajustar la altura según sea necesario */
+    width: 100%; 
+    height: 40px;
 }
 
 .custom-select select {

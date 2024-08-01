@@ -1,0 +1,161 @@
+.navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;}
+    nav{
+        background-color: #92b6f5;
+    }
+   .navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
+
+body{
+    background-color: #0a214928;
+}
+
+.contenedor_Sup {
+  
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header{
+    font-family: "Inter", sans-serif;
+  font-style: normal;
+ 
+
+}
+main {
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    box-sizing: border-box; 
+    gap: 1rem; 
+    
+}
+
+
+aside {
+    
+    width: 15%; 
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffffc4;
+    box-sizing: border-box; 
+}
+
+/* Estilos para <article> */
+article {
+    width: 85%; 
+    border-radius: 10px;
+    background-color: #ffffffc4;
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+
+.level, .category {
+    margin: 20px 0; 
+    display: flex;
+    flex-direction: column; 
+}
+
+h6 {
+    margin-bottom: 0.5rem; 
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem; 
+}
+
+.two-column{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 5px;
+    
+}
+#card {
+    display: flex;
+    flex-direction: row; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    padding: 16px; 
+    box-shadow: 0 4px 8px rgba(33, 46, 218, 0.1); 
+    background-color: #fff; 
+    max-width: 100%; 
+    margin: 20px;
+    align-items: flex-start; 
+}
+
+.titleanddes {
+    flex: 9; 
+    display: flex;
+    flex-direction: column; 
+    margin: 10px 0; 
+}
+
+.infog {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    justify-content: flex-end; 
+}
+.boton{
+    background-color: #344d77d5;
+    color: #fff;
+    width:100px;
+    height: 30px;
+}
+footer {
+    background-color: #92b6f5;
+  
+  }
+    
+    main{
+     display: flex;
+     justify-content: center;
+      flex-direction: column ;
+    }
+    .hr {
+      height: 3px;
+        background-color: #92b6f5;
+    }
+  
+    section{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+  
+  
+    }

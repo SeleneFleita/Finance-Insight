@@ -1,27 +1,107 @@
+:root {
+  --primary-color: #010712;
+  --secondary-color: #818386;
+  --bg-color: #FCFDFD;
+  --button-color: #3B3636;
+  --h1-color: #3F444C;
+}
+
+[data-theme="dark"] {
+  --primary-color: #FCFDFD;
+  --secondary-color: #818386;
+  --bg-color: #010712;
+  --button-color: #818386;
+  --h1-color: #FCFDFD;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: #92b6f5;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-title {
+  font-family: naturasans; 
+  font-size: 30px;
+  color: var(--h1-color);
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+}
+
+button {
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+  background-color: var(--button-color);
+  color: var(--bg-color);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #92b6f5;
+  padding: 20px;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+h6{
+  color: #000000;
+  font-size: 16px;
+  text-decoration:underline;
+}
+li a{
+  text-decoration: none;
+  color: #010712;
+  transition: color 0.3s ease;
+}
+li a:hover{
+  color: #818386;
+}
 #help {
   text-align: center;
   margin: 20px;
 }
 body{
-   background-color: rgba(5, 20, 34, 0.089);;
+   background-color: #05142217;
 }
 
 .hel{
 display: flex;
 align-items: center;
-flex-direction: column; /* Alinea los elementos uno al lado del otro y permite que se ajusten en múltiples líneas */
-gap: 20px; /* Espacio entre los elementos */
-justify-content: center; /* Opcional: Centra los elementos horizontalmente */
+flex-direction: column; 
+gap: 20px; 
+justify-content: center; 
+border: 2px #333;
 }
 .hel {
   display: flex;
   align-items: center;
   width: 80%;
-  max-width: 100%; /* Ajusta el ancho máximo si es necesario */
+  max-width: 100%; 
   margin: 10px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px #333;
 }
 
 /* Campo de búsqueda */
@@ -29,16 +109,17 @@ justify-content: center; /* Opcional: Centra los elementos horizontalmente */
   display: flex;
   align-items: center;
   width: 80%;
+  border: 2px #333;
 }
 
 /* Campo de búsqueda */
 #search {
-  flex: 1; /* Ocupa el espacio restante */
+  flex: 1; 
   padding: 10px;
-  border: 1px solid #ccc; /* Añade un borde al campo de búsqueda */
+  border: 1px solid #ccc; 
   border-radius: 5px 0 0 5px;
   outline: none;
-  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total del elemento */
+  box-sizing: border-box; 
 }
 
 /* Botón de búsqueda */
@@ -55,7 +136,7 @@ justify-content: center; /* Opcional: Centra los elementos horizontalmente */
   color: white; /* Color del icono */
   font-size: 16px; /* Tamaño del icono */
   width: 100px; /* Ancho del botón */
-  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total del elemento */
+  box-sizing: border-box;
 }
 
 /* Hover del botón de búsqueda */
@@ -65,7 +146,7 @@ justify-content: center; /* Opcional: Centra los elementos horizontalmente */
 
 /* Icono de lupa dentro del botón */
 .search-button i {
-  margin: 0; /* Asegúrate de que el icono esté centrado sin márgenes adicionales */
+  margin: 0; 
 }
 
 /* Hover del botón de búsqueda */
@@ -92,56 +173,56 @@ justify-content: center; /* Opcional: Centra los elementos horizontalmente */
 /* Contenedor de categorías */
 .pre-frec {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
-  gap: 20px; /* Espacio entre las categorías */
-  justify-content: space-between; /* Distribuye las tarjetas para ocupar el máximo espacio disponible */
+  flex-direction: column;
+  gap: 20px; 
+  justify-content: space-between;
 }
 
 /* Categoría */
 .category {
   padding: 20px;
-  background-color: #f9f9f9; /* Fondo ligero */
-  border: 1px solid #ddd; /* Borde ligero */
-  border-radius: 5px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  margin-top: 20px; /* Espacio superior */
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
   text-decoration: none;
 }
 
 /* Títulos dentro de cada categoría */
 .category h4 {
-  background-color: #2c5282; /* Fondo del título */
-  color: white; /* Color del texto del título */
+  background-color: #2c5282; 
+  color: white; 
   padding: 10px;
-  border-radius: 5px; /* Bordes redondeados para el título */
-  margin: 0; /* Elimina el margen del título */
+  border-radius: 5px; 
+  margin: 0; 
 }
 
 /* Listas dentro de cada categoría */
 .category ul {
-  list-style-type: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el padding de la lista */
-  margin: 0; /* Elimina el margen de la lista */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 /* Elementos de la lista */
 .category ul li {
-  margin: 10px 0; /* Espacio entre los elementos de la lista */
+  margin: 10px 0;
 }
 
-/* Enlaces dentro de las listas */
+
 .category ul li a {
-  color: #2c5282; /* Color del enlace */
-  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #2c5282;
+  text-decoration: none; 
 }
 
 .category ul li a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón */
+  text-decoration: underline; 
 }
 
 
 .pre-frec .category {
-  flex: 1 1 300px; /* Ajusta el ancho mínimo y permite que se expanda */
+  flex: 1 1 300px; 
 }
 
 #help-articles {
@@ -149,55 +230,55 @@ justify-content: center; /* Opcional: Centra los elementos horizontalmente */
 }
 #contact-support {
   padding: 20px;
-  background-color: #f9f9f9; /* Fondo ligero */
-  border: 1px solid #ddd; /* Borde ligero */
-  border-radius: 5px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  margin-top: 20px; /* Espacio superior */
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
 }
 
 /* Título de contacto */
 #contact-support h2 {
-  color: #2c5282; /* Color del título */
-  margin-top: 0; /* Elimina el margen superior */
-  margin-bottom: 10px; /* Espacio inferior */
-  font-size: 1.5rem; /* Tamaño de fuente */
+  color: #2c5282;
+  margin-top: 0; 
+  margin-bottom: 10px; 
+  font-size: 1.5rem; 
 }
 
-/* Párrafo de contacto */
+
 #contact-support p {
-  margin-bottom: 20px; /* Espacio inferior */
-  font-size: 1rem; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  margin-bottom: 20px; 
+  font-size: 1rem; 
+  color: #333; 
 }
 
 /* Listas dentro de contacto */
 #contact-support ul {
-  list-style-type: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el padding de la lista */
-  margin: 0; /* Elimina el margen de la lista */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 /* Elementos de la lista */
 #contact-support ul li {
-  margin: 10px 0; /* Espacio entre los elementos de la lista */
-  font-size: 1rem; /* Tamaño de fuente */
+  margin: 10px 0; 
+  font-size: 1rem; 
 }
 
 /* Enlaces dentro de la lista */
 #contact-support ul li a {
-  color: #2c5282; /* Color del enlace */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  display: block; /* Hace que el enlace ocupe todo el ancho del elemento */
-  padding: 10px; /* Espacio interno */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  color: #2c5282; 
+  text-decoration: none; 
+  display: block; 
+  padding: 10px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease;
 }
 
 /* Hover del enlace */
 #contact-support ul li a:hover {
-  background-color: #e2e8f0; /* Fondo al pasar el ratón */
-  text-decoration: underline; /* Subrayado al pasar el ratón */
+  background-color: #e2e8f0; 
+  text-decoration: underline; 
 }
 
 
@@ -236,7 +317,7 @@ background-color: #fefefe;
 margin: 15% auto;
 padding: 20px;
 border: 1px solid #888;
-width: 80%; /* Ancho del modal */
+width: 80%; 
 }
 
 .close {
@@ -252,3 +333,20 @@ color: black;
 text-decoration: none;
 cursor: pointer;
 }
+footer {
+  background-color: #92b6f5;
+
+}
+  
+  main{
+   display: flex;
+   justify-content: center;
+    flex-direction: column ;
+  }
+  .hr {
+    height: 3px;
+      background-color: #92b6f5;
+  }
+
+
+  
