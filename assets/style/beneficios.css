@@ -49,21 +49,13 @@ footer {
 
 }
 .beneficios{
-background-color: white;
+background-color:white;
 border-radius: 5px;
 gap: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
+
 }
-.beneficios .cartas{
-    display: flex;
-    justify-content: center;
-}
+
 .cartas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 border-radius: 5px;
 gap: 20px;
 box-shadow: black;
