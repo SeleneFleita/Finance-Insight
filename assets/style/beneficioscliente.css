@@ -1,0 +1,83 @@
+
+.navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;}
+ nav{
+        background-color: #92b6f5;
+    }
+.navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+ .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
+main{
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #92b6f5;
+
+}
+.container{
+background-color: white;
+border-radius: 5px;
+gap: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+.container .cartas{
+    display: flex;
+    justify-content: center;
+}
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+border-radius: 5px;
+gap: 20px;
+box-shadow: black;
+}
+.card{
+    width: 220px; 
+    height: 380px
+}
+.card:hover{
+    border-color: #92b6f5;
+    transform: scale(1.1);
+border-width: 3px;
+
+}
+
+h4{
+    display: flex;
+   align-self: center
+}
