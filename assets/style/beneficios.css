@@ -36,40 +36,50 @@ border:0;
 outline:none;
 border:0;
 } 
-main {
-    padding: 0;
-    margin: 0;
+ul{
+   list-style: none;
+   list-style: none;
+}
+main{
     min-height: 100vh;
 }
-  
-.beneficios {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 10px;
-    gap: 60px;
-   
+
+footer {
+    background-color: #92b6f5;
+
+}
+.beneficios{
+background-color: white;
+border-radius: 5px;
+gap: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.beneficios .cartas{
+    display: flex;
+    justify-content: center;
+}
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+border-radius: 5px;
+gap: 20px;
+box-shadow: black;
 }
 .card{
-    width: 350px;
-    background: linear-gradient(to right, rgb(93, 215, 236), transparent);
-    border-radius: 15px;
-    color: black;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 15px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 220px; 
+    height: 380px
+}
+.card:hover{
+    border-color: black;
+    transform: scale(1.1);
+border-width: 3px;
 
 }
-.p {
-    display: flex;
-    flex-direction: column;
-}
 
-.card img {
+h4{
     display: flex;
-    align-items: center;
-    border-radius: 15px;
-    width: 180px;
-    height: 220px;
+   align-self: center
 }
