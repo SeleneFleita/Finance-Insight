@@ -1,0 +1,84 @@
+.navbar{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;}
+    nav{
+        background-color: #92b6f5;
+    }
+   .navbar-title{
+    font-family: naturasans;
+    font-weight: 500px;
+    font-size: 30px;
+    height: 100px;
+    margin-right: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .divider {
+    border-left: 1px solid #ededed;
+}
+.logo {
+  height: 90px;
+  width: 90px;
+}
+button{
+border-radius:10px;
+outline:none;
+outline-color: transparent;
+border:0;
+}
+.navbar-toggler{
+    border-radius:10px;
+outline:none;
+border:0;
+} 
+
+.titulo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+}
+.texto{
+   
+    display: flex;
+    justify-content: center;
+}
+
+#primero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+#segundo{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+ 
+}
+
+#tercero{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+ 
+}
+
+.card:hover{
+    border-color: lightblue;
+    transform: scale(1.0);
+    border-width: 2px;
+
+}
