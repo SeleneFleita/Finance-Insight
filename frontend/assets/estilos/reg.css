@@ -13,7 +13,7 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      overflow: hidden;
-     background: url(../img/fondologreg.jpg);
+     background-color: #fff;
  }
 
  .wrapper {
@@ -35,6 +35,7 @@
     line-height: 100px;
     background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
     z-index: 100;
+    background-color: #92b6f5;
 }
 
 .nav-logo p {
@@ -49,7 +50,9 @@
     align-items: center;
     flex-grow: 1;
 }
-
+span{
+    color: #fff;
+}
 .nav-button .btn { 
     width: 130px;
     height: 40px;

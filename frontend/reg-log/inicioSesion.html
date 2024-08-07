@@ -18,64 +18,76 @@
         <div class="nav-menu" id="navMenu">
         </div>
         <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Cliente</button>
-            <button class="btn" id="registerBtn" onclick="register()">Entidad Bancaria</button>
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Entidad Bancaria</button>
+            <button class="btn" id="registerBtn" onclick="register()">Cliente</button>
         </div>
         
     </nav>
+<main>
 
-<!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
-        <!------------------- login form -------------------------->
-
-        <div class="login-container" id="login">
-            <div class="top">
-                <header>¡ Entidad Bancaria!, </header>
-                <span>¿No tienes una cuenta? <a href="register.html" onclick="">Registrarme</a></span>
+    <!----------------------------- Form box ----------------------------------->    
+        <div class="form-box">
+            
+            <!------------------- login form -------------------------->
+    
+            <div class="login-container" id="login">
+                <div class="top">
+                    <header>¡Bienvenido!, Entidad Bancaria </header>
+                    <span>¿No tienes una cuenta? <a href="register.html" onclick="">Registrarme</a></span>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" id="mail_bank" placeholder="Ingresar Email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" id="password_bank" placeholder="Ingresar Contraseña">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" onclick="logBanco(event)" value="Iniciar Sesión">
+                </div>
+                <div class="two-col">
+                    
+                    <div class="two">
+                        <label><a href="#" >¿Olvidaste tu contraseña?</a></label>
+                    </div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="text" class="input-field" id="mail_bank" placeholder="Ingresar Email">
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" id="password_bank" placeholder="Ingresar Contraseña">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" onclick="logBanco(event)" value="Iniciar Sesión">
-            </div>
-            <div class="two-col">
-                
-                <div class="two">
-                    <label><a href="#" >¿Olvidaste tu contraseña?</a></label>
+    
+            <!------------------- registration form -------------------------->
+            <div class="register-container" id="register">
+                <div class="top">
+                    <header>¡Bienvenido!</header>
+                    <span>¿No tienes una cuenta? <a  href="register.html" onclick="">Registrarme</a></span>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Ingresar gmail" id="mail_client">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Ingresar contraseña" id="password_client">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Registrarme" onclick="logClient()">
+                </div>
+    
                 </div>
             </div>
         </div>
-
-        <!------------------- registration form -------------------------->
-        <div class="register-container" id="register">
-            <div class="top">
-                <header>¡Bienvenido!</header>
-                <span>¿Ya tienes una cuenta? <a href="#" onclick="login()">Iniciar sesión</a></span>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Ingresar gmail" id="mail_client">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Ingresar contraseña" id="password_client">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Registrarme" onclick="logClient()">
-            </div>
-
-            </div>
-        </div>
+    </div>   
+</main>
+<footer class="pie">
+    <div class="footer-content">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
     </div>
-</div>   
-
+</footer>
+</body>
 <script>
    function myMenuFunction() {
     var i = document.getElementById("navMenu");
